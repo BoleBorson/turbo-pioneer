@@ -1,6 +1,11 @@
 package item
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+
+	reg "github.com/turbo-pioneer/planner/internal/registry"
+)
 
 type ItemRegistry struct {
 	Items map[string]*Item `json:"items,omitempty"`
@@ -10,13 +15,18 @@ func NewRegistry() *ItemRegistry {
 	return &ItemRegistry{}
 }
 
-func (reg *ItemRegistry) LoadRegistryFromFile (b []byte) (*ItemRegistry, error) {
-	r := NewRegistry()
-	err := json.Unmarshal(b, &r)
+func (reg *ItemRegistry) LoadRegistryFromFile (b []byte) (reg.Registry, error) {
+	err := json.Unmarshal(b, &reg)
 	if err != nil {
 		return nil, err
 	}
-	return r, nil
+	return reg, nil
+}
+
+func (reg *ItemRegistry) Get(s string) (any, error) {
+	if v, ok := reg.Items[s]; ok {
+		return v, nil
+	} else { return nil, fmt.Errorf("item %s, was not found in the registry", s)}
 }
 
 type Item struct {

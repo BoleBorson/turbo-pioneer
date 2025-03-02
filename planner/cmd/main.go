@@ -12,10 +12,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	r, err := internal.LoadRegistryFromFile(b)
+	dr := internal.NewRegistry()
+	r, err := dr.LoadRegistryFromFile(b)
 	if err != nil {
 		panic(err)
 	}
 	
-	fmt.Println(r.Recipes["Recipe_Alternate_PolymerResin_C"])
+	fmt.Println(r.GetRecipe("Recipe_Alternate_PolymerResin_C"))
+	fmt.Println(r.GetItem("Desc_NuclearWaste_C"))
 }
