@@ -6,13 +6,25 @@ import (
 )
 
 type Node struct {
-	recipe recipe.Recipe
-	machine any
-	inputs []Resource
-	outputs []Resource
+	Recipe *recipe.Recipe
+	Machine any
+	Inputs []*Resource
+	Outputs []*Resource
+}
+
+func NewNode() *Node {
+	return &Node{}
 }
 
 type Resource struct {
-	item item.Item
-	rate float64 // rate represents the number of items produced per min
+	Item *item.Item
+	Rate float64 // rate represents the number of items produced per min
+}
+
+func NewResource(item *item.Item, amount float64, time int) *Resource {
+	rate := (amount / float64(time)) * 60  
+	return &Resource{
+		Item: item,
+		Rate: rate,
+	}
 }
