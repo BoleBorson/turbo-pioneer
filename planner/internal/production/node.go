@@ -5,15 +5,19 @@ import (
 	"github.com/turbo-pioneer/planner/internal/recipe"
 )
 
+// Node represents a Machine. Most notably it provides information about what input rates it accepts and what output rate it releases.
 type Node struct {
-	Recipe *recipe.Recipe
+	Recipe  *recipe.Recipe
+	Root    bool
 	Machine any
-	Inputs []*Resource
+	Inputs  []*Resource
 	Outputs []*Resource
 }
 
 func NewNode() *Node {
-	return &Node{}
+	return &Node{
+		Root: false,
+	}
 }
 
 type Resource struct {
@@ -22,7 +26,7 @@ type Resource struct {
 }
 
 func NewResource(item *item.Item, amount float64, time int) *Resource {
-	rate := (amount / float64(time)) * 60  
+	rate := (amount / float64(time)) * 60
 	return &Resource{
 		Item: item,
 		Rate: rate,

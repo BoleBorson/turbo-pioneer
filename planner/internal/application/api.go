@@ -9,7 +9,7 @@ import (
 
 type Application struct {
 	dataRegistry *internal.DataRegistry
-	productionLine any
+	lineBuilder *production.LineBuilder
 }
 
 func NewApplication() (*Application, error) {
@@ -25,38 +25,15 @@ func NewApplication() (*Application, error) {
 
 	return &Application{
 		dataRegistry: r,
+		lineBuilder: production.NewLineBuilder(r),
 	}, nil
 }
 
-func (a *Application) GenerateNode(recipeName string) (*production.Node, error) {
-	r, err := a.dataRegistry.GetRecipe(recipeName)
+func (a *Application) GenerateLine(recipeName string) (*production.ProductionLine, error) {
+	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName)
 	if err != nil {
 		return nil, err
 	}
-	n := production.NewNode()
-	n.Recipe = r
-	
-	var inputs = make([]*production.Resource, len(r.Ingredients))
-	for idx, v := range r.Ingredients {
-		i, err := a.dataRegistry.GetItem(v.Item)
-		if err != nil {
-			return nil, err
-		}
-		inputs[idx] = production.NewResource(i, v.Amount, r.Time)
-	}
-
-	n.Inputs = inputs
-
-	var outputs = make([]*production.Resource, len(r.Products))
-	for idx, v := range r.Products {
-		i, err := a.dataRegistry.GetItem(v.Item)
-		if err != nil {
-			return nil, err
-		}
-		outputs[idx] = production.NewResource(i, v.Amount, r.Time)
-	}
-
-	n.Outputs = outputs
-
-	return n, nil
+	return prod, nil
 }
+

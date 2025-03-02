@@ -20,6 +20,13 @@ func (reg *RecipeRegistry) LoadRegistryFromFile(b []byte) (reg.Registry, error) 
 	if err != nil {
 		return nil, err
 	}
+	var inMachines map[string]*Recipe = make(map[string]*Recipe)
+	for _, v := range reg.Recipes {
+		if v.InMachine {
+			inMachines[v.Name] = v
+		}
+	}
+	reg.Recipes = inMachines
 	return reg, nil
 }
 

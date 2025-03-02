@@ -11,10 +11,19 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	n, err := app.GenerateNode("Recipe_IronRod_C")
+	prod, err := app.GenerateLine("Reinforced Iron Plate")
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(n.Inputs[0].Rate)
-	fmt.Println(n.Outputs[0].Rate)
+
+	for _, v := range prod.GetNodes() {
+		if v.Root {
+			fmt.Println("Root Node")
+		}
+		fmt.Println(v.Recipe.Name)
+	}
+
+	for _, v := range prod.GetEdges() {
+		v.PrintEdge()
+	}
 }
