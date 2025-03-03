@@ -11,7 +11,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	prod, err := app.GenerateLine("Reinforced Iron Plate")
+	// prod, err := app.GenerateLine("Reinforced Iron Plate")
+	prod, err := app.GenerateLine("Motor")
+
 	if err != nil {
 		panic(err)
 	}
@@ -20,7 +22,7 @@ func main() {
 		if v.Root {
 			fmt.Println("Root Node")
 		}
-		fmt.Println(v.Recipe.Name)
+		fmt.Printf("%s, produced in %s \n", v.Recipe.Name, v.Machine.Name)
 	}
 
 	for _, v := range prod.GetEdges() {

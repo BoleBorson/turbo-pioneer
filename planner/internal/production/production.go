@@ -39,6 +39,7 @@ func (l *LineBuilder) GenerateNode(recipeName string) (*Node, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	n := NewNode()
 	n.Recipe = r
 
@@ -64,11 +65,29 @@ func (l *LineBuilder) GenerateNode(recipeName string) (*Node, error) {
 
 	n.Outputs = outputs
 
+	building, err := l.dataRegistry.GetBuilding(r.ProducedIn[0])
+	if err != nil {
+		return nil, err
+	}
+	n.Machine = building
+
 	return n, nil
 }
 
-func (l *LineBuilder) CreateProductionLineFromRecipe(recipeName string) (*ProductionLine, error) {
+func (l *LineBuilder) CreateProductionLineFromRecipe(recipeName string, rate float64) (*ProductionLine, error) {
 	prod := NewProductionLine()
+
+	r, err := l.dataRegistry.GetRecipe(recipeName)
+	if err != nil {
+		return nil, err
+	}
+
+	i, err := l.dataRegistry.GetItem(r.Products[0].Item)
+	if err != nil {
+		return nil, err
+	}
+
+	_ = NewRootNode(r, i, rate)
 	if err := l.generateLine(recipeName, prod, nil); err == nil {
 		return prod, nil
 	} else {

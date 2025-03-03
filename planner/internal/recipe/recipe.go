@@ -33,7 +33,9 @@ func (reg *RecipeRegistry) LoadRegistryFromFile(b []byte) (reg.Registry, error) 
 func (reg *RecipeRegistry) Get(s string) (any, error) {
 	if v, ok := reg.Recipes[s]; ok {
 		return v, nil
-	} else { return nil, fmt.Errorf("recipe %s, was not found in the registry", s)}
+	} else {
+		return nil, fmt.Errorf("recipe %s, was not found in the registry", s)
+	}
 }
 
 type Recipe struct {
@@ -44,7 +46,7 @@ type Recipe struct {
 	InMachine   bool          `json:"inMachine,omitempty"`
 	Ingredients []*Ingredient `json:"ingredients,omitempty"`
 	Products    []*Product    `json:"products,omitempty"`
-	ProducedIn  []string      `json:"produced_in,omitempty"`
+	ProducedIn  []string      `json:"producedIn,omitempty"`
 }
 
 type Ingredient struct {

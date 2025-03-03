@@ -1,0 +1,2945 @@
+{
+    "items": {
+        "Desc_NuclearWaste_C": {
+            "slug": "uranium-waste",
+            "name": "Uranium Waste",
+            "description": "The by-product of consuming Uranium Fuel Rods in a Nuclear Power Plant.\nNon-Fissile Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
+            "sinkPoints": 0,
+            "className": "Desc_NuclearWaste_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 10.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PlutoniumWaste_C": {
+            "slug": "plutonium-waste",
+            "name": "Plutonium Waste",
+            "description": "The by-product of consuming Plutonium Fuel Rods in a Nuclear Power Plant.\nMust be stored in a safe location. Handle with caution.\n\nCaution: EXTREMELY Radioactive.",
+            "sinkPoints": 0,
+            "className": "Desc_PlutoniumWaste_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 200.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Cement_C": {
+            "slug": "concrete",
+            "name": "Concrete",
+            "description": "Used for building.\nGood for stable Foundations.",
+            "sinkPoints": 12,
+            "className": "Desc_Cement_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Silica_C": {
+            "slug": "silica",
+            "name": "Silica",
+            "description": "Derived from Raw Quartz. Commonly used to create glass structures, in advanced refinement processes, and for alternative production of electronics.",
+            "sinkPoints": 20,
+            "className": "Desc_Silica_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_IronPlate_C": {
+            "slug": "iron-plate",
+            "name": "Iron Plate",
+            "description": "Used for crafting.\nOne of the most basic parts.",
+            "sinkPoints": 6,
+            "className": "Desc_IronPlate_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SteelPlate_C": {
+            "slug": "steel-beam",
+            "name": "Steel Beam",
+            "description": "Primarily used when constructing slightly more advanced buildings.",
+            "sinkPoints": 64,
+            "className": "Desc_SteelPlate_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AluminumIngot_C": {
+            "slug": "aluminum-ingot",
+            "name": "Aluminum Ingot",
+            "description": "Smelted from Aluminum Scrap, which is refined from Alumina Solution.\nUsed to produce specialized aluminum-based parts.",
+            "sinkPoints": 131,
+            "className": "Desc_AluminumIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Battery_C": {
+            "slug": "battery",
+            "name": "Battery",
+            "description": "Primarily used as fuel for Drones and vehicles.",
+            "sinkPoints": 465,
+            "className": "Desc_Battery_C",
+            "stackSize": 200,
+            "energyValue": 6000.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Fuel_C": {
+            "slug": "packaged-fuel",
+            "name": "Packaged Fuel",
+            "description": "Fuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
+            "sinkPoints": 270,
+            "className": "Desc_Fuel_C",
+            "stackSize": 100,
+            "energyValue": 750.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 235,
+                "g": 125,
+                "b": 21,
+                "a": 255
+            }
+        },
+        "Desc_PackagedIonizedFuel_C": {
+            "slug": "packaged-ionized-fuel",
+            "name": "Packaged Ionized Fuel",
+            "description": "Ionized Fuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
+            "sinkPoints": 5246,
+            "className": "Desc_PackagedIonizedFuel_C",
+            "stackSize": 100,
+            "energyValue": 10000.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PackagedRocketFuel_C": {
+            "slug": "packaged-rocket-fuel",
+            "name": "Packaged Rocket Fuel",
+            "description": "Rocket Fuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
+            "sinkPoints": 1028,
+            "className": "Desc_PackagedRocketFuel_C",
+            "stackSize": 100,
+            "energyValue": 7200.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_TurboFuel_C": {
+            "slug": "packaged-turbofuel",
+            "name": "Packaged Turbofuel",
+            "description": "Turbofuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
+            "sinkPoints": 570,
+            "className": "Desc_TurboFuel_C",
+            "stackSize": 100,
+            "energyValue": 2000.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 212,
+                "g": 41,
+                "b": 46,
+                "a": 255
+            }
+        },
+        "Desc_HazmatFilter_C": {
+            "slug": "iodine-infused-filter",
+            "name": "Iodine-Infused Filter",
+            "description": "Absorbs radioactive particles when used with the Hazmat Suit.",
+            "sinkPoints": 2274,
+            "className": "Desc_HazmatFilter_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CompactedCoal_C": {
+            "slug": "compacted-coal",
+            "name": "Compacted Coal",
+            "description": "A much more efficient alternative to Coal. Used as fuel for vehicles and Coal-Powered Generators.",
+            "sinkPoints": 28,
+            "className": "Desc_CompactedCoal_C",
+            "stackSize": 100,
+            "energyValue": 630.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PackagedOilResidue_C": {
+            "slug": "packaged-heavy-oil-residue",
+            "name": "Packaged Heavy Oil Residue",
+            "description": "Heavy Oil Residue, packaged for alternative transport. Can be used as fuel for vehicles.",
+            "sinkPoints": 180,
+            "className": "Desc_PackagedOilResidue_C",
+            "stackSize": 100,
+            "energyValue": 400.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 109,
+                "g": 45,
+                "b": 120,
+                "a": 255
+            }
+        },
+        "Desc_PetroleumCoke_C": {
+            "slug": "petroleum-coke",
+            "name": "Petroleum Coke",
+            "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient Coal replacement.",
+            "sinkPoints": 20,
+            "className": "Desc_PetroleumCoke_C",
+            "stackSize": 200,
+            "energyValue": 180.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PackagedOil_C": {
+            "slug": "packaged-oil",
+            "name": "Packaged Oil",
+            "description": "Crude Oil, packaged for alternative transport. Can be used as fuel for vehicles.",
+            "sinkPoints": 180,
+            "className": "Desc_PackagedOil_C",
+            "stackSize": 100,
+            "energyValue": 320.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_IronRod_C": {
+            "slug": "iron-rod",
+            "name": "Iron Rod",
+            "description": "Used for crafting.\nOne of the most basic parts.",
+            "sinkPoints": 4,
+            "className": "Desc_IronRod_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Wire_C": {
+            "slug": "wire",
+            "name": "Wire",
+            "description": "Used for crafting.\nOne of the most basic parts.",
+            "sinkPoints": 6,
+            "className": "Desc_Wire_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Cable_C": {
+            "slug": "cable",
+            "name": "Cable",
+            "description": "Used for crafting.\nPrimarily used to build Power Lines.",
+            "sinkPoints": 24,
+            "className": "Desc_Cable_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_IronIngot_C": {
+            "slug": "iron-ingot",
+            "name": "Iron Ingot",
+            "description": "Used for crafting the most basic parts.",
+            "sinkPoints": 2,
+            "className": "Desc_IronIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_IronPlateReinforced_C": {
+            "slug": "reinforced-iron-plate",
+            "name": "Reinforced Iron Plate",
+            "description": "Used for crafting.\nA sturdier and more durable Iron Plate.",
+            "sinkPoints": 120,
+            "className": "Desc_IronPlateReinforced_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Rotor_C": {
+            "slug": "rotor",
+            "name": "Rotor",
+            "description": "Used for crafting.\nThe moving parts of a motor.",
+            "sinkPoints": 140,
+            "className": "Desc_Rotor_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_LiquidFuel_C": {
+            "slug": "fuel",
+            "name": "Fuel",
+            "description": "Can be used as-is to generate power, or packaged to be used as fuel for vehicles or the Jetpack.",
+            "sinkPoints": 75000,
+            "className": "Desc_LiquidFuel_C",
+            "stackSize": 50000,
+            "energyValue": 750.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 235,
+                "g": 125,
+                "b": 21,
+                "a": 0
+            }
+        },
+        "Desc_RocketFuel_C": {
+            "slug": "rocket-fuel",
+            "name": "Rocket Fuel",
+            "description": "A high-impulse compressed gas fuel.\nCan be used as-is to power Fuel-Powered Generators, or packaged to be used as fuel for vehicles or the Jetpack.",
+            "sinkPoints": 289000,
+            "className": "Desc_RocketFuel_C",
+            "stackSize": 50000,
+            "energyValue": 3600.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 189,
+                "g": 37,
+                "b": 26,
+                "a": 0
+            }
+        },
+        "Desc_CopperSheet_C": {
+            "slug": "copper-sheet",
+            "name": "Copper Sheet",
+            "description": "Used for crafting.\nPrimarily used for Pipelines due to its high corrosion resistance.",
+            "sinkPoints": 24,
+            "className": "Desc_CopperSheet_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_ModularFrame_C": {
+            "slug": "modular-frame",
+            "name": "Modular Frame",
+            "description": "Used for crafting.\nA multipurpose building block.",
+            "sinkPoints": 408,
+            "className": "Desc_ModularFrame_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_IronScrew_C": {
+            "slug": "screw",
+            "name": "Screw",
+            "description": "Used for crafting.\nOne of the most basic parts.",
+            "sinkPoints": 2,
+            "className": "Desc_IronScrew_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NitricAcid_C": {
+            "slug": "nitric-acid",
+            "name": "Nitric Acid",
+            "description": "Produced when Nitrogen Gas reacts with Water. Its high corrosiveness and oxidizing properties make it an excellent choice for refinement and fuel production processes.",
+            "sinkPoints": 94000,
+            "className": "Desc_NitricAcid_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 217,
+                "g": 217,
+                "b": 162,
+                "a": 0
+            }
+        },
+        "Desc_LiquidTurboFuel_C": {
+            "slug": "turbofuel",
+            "name": "Turbofuel",
+            "description": "A more efficient alternative to Fuel. Can be used as-is to generate power, or packaged to be used as fuel for vehicles.",
+            "sinkPoints": 225000,
+            "className": "Desc_LiquidTurboFuel_C",
+            "stackSize": 50000,
+            "energyValue": 2000.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 212,
+                "g": 41,
+                "b": 46,
+                "a": 0
+            }
+        },
+        "Desc_GasTank_C": {
+            "slug": "empty-fluid-tank",
+            "name": "Empty Fluid Tank",
+            "description": "Used to package gases and volatile liquids for transportation.",
+            "sinkPoints": 170,
+            "className": "Desc_GasTank_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CrystalOscillator_C": {
+            "slug": "crystal-oscillator",
+            "name": "Crystal Oscillator",
+            "description": "An electronic oscillator circuit that uses the mechanical resonance of a vibrating crystal to create an electrical signal with a precise frequency.",
+            "sinkPoints": 3072,
+            "className": "Desc_CrystalOscillator_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Motor_C": {
+            "slug": "motor",
+            "name": "Motor",
+            "description": "Creates a mechanical force that is used to move things from machines to vehicles.",
+            "sinkPoints": 1520,
+            "className": "Desc_Motor_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_DarkMatter_C": {
+            "slug": "dark-matter-crystal",
+            "name": "Dark Matter Crystal",
+            "description": "Concentrated Dark Matter Residue that is isolated within a crystalline vessel. This form of containment allows for utilising Dark Matter reliably in other production processes.\n\nPower Usage: 500-1500 MW (1000 MW average).",
+            "sinkPoints": 1780,
+            "className": "Desc_DarkMatter_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_IonizedFuel_C": {
+            "slug": "ionized-fuel",
+            "name": "Ionized Fuel",
+            "description": "Fuel that has been ionized, allowing it to deliver incredible output.\nCan be used as-is to power Fuel-Powered Generators, or packaged to be used as fuel for vehicles or the Jetpack.",
+            "sinkPoints": 2398000,
+            "className": "Desc_IonizedFuel_C",
+            "stackSize": 50000,
+            "energyValue": 5000.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 213,
+                "g": 95,
+                "b": 26,
+                "a": 60
+            }
+        },
+        "Desc_ComputerSuper_C": {
+            "slug": "supercomputer",
+            "name": "Supercomputer",
+            "description": "The next-gen version of a Computer.",
+            "sinkPoints": 97352,
+            "className": "Desc_ComputerSuper_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CoolingSystem_C": {
+            "slug": "cooling-system",
+            "name": "Cooling System",
+            "description": "Keeps advanced parts and buildings from exceeding efficient temperature levels.",
+            "sinkPoints": 12006,
+            "className": "Desc_CoolingSystem_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_FicsiteMesh_C": {
+            "slug": "ficsite-trigon",
+            "name": "Ficsite Trigon",
+            "description": "The Ficsite Trigon, made from Ficsite Ingots, is perfectly shaped for all construction challenges. It's performance is so exceptional, it basically solved structural engineering.",
+            "sinkPoints": 1291,
+            "className": "Desc_FicsiteMesh_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_MotorLightweight_C": {
+            "slug": "turbo-motor",
+            "name": "Turbo Motor",
+            "description": "A more complex and powerful version of the regular Motor.",
+            "sinkPoints": 240496,
+            "className": "Desc_MotorLightweight_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_TimeCrystal_C": {
+            "slug": "time-crystal",
+            "name": "Time Crystal",
+            "description": "Time Crystals are Diamonds that have been reconfigured on a sub-atomic level in the Converter to retain a time-periodic self-organizing structure. This allows them to be used in the development of quantum processing and storage technologies.",
+            "sinkPoints": 960,
+            "className": "Desc_TimeCrystal_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_DarkEnergy_C": {
+            "slug": "dark-matter-residue",
+            "name": "Dark Matter Residue",
+            "description": "Produced as a by-product of Quantum Encoding processes and alternatively generated in the Converter.\n\nVarious fields of science are still debating the nature and properties of Dark Matter. Meanwhile, FICSIT has found several applications for it in space-time manipulation.",
+            "sinkPoints": 130000,
+            "className": "Desc_DarkEnergy_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 253,
+                "g": 175,
+                "b": 249,
+                "a": 150
+            }
+        },
+        "Desc_SAMIngot_C": {
+            "slug": "reanimated-sam",
+            "name": "Reanimated SAM",
+            "description": "The active and contained form of the Strange Alien Matter.\n\nProper electromagnetic containment is required, as it appears to be able to manipulate the atomic bonds of any matter it comes into contact with.",
+            "sinkPoints": 160,
+            "className": "Desc_SAMIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_QuantumEnergy_C": {
+            "slug": "excited-photonic-matter",
+            "name": "Excited Photonic Matter",
+            "description": "Excited Photonic Matter is essential for all production processes in the Quantum Encoder.\n\nFormed in the Converter by inducing intense photon interactions through exposure to SAM in a high-energy environment.",
+            "sinkPoints": 100000,
+            "className": "Desc_QuantumEnergy_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 118,
+                "g": 245,
+                "b": 232,
+                "a": 90
+            }
+        },
+        "Desc_Diamond_C": {
+            "slug": "diamonds",
+            "name": "Diamonds",
+            "description": "Synthetic Diamonds produced by exposing Coal to extreme heat and pressure.\n\nUsed in the production of Time Crystals and Dark Matter Crystals.\n\nPower Usage: 250-750 MW (500 MW average).",
+            "sinkPoints": 240,
+            "className": "Desc_Diamond_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AluminumPlate_C": {
+            "slug": "alclad-aluminum-sheet",
+            "name": "Alclad Aluminum Sheet",
+            "description": "Used to make products that require high heat conduction or a high specific strength. Thin, lightweight, and highly durable.",
+            "sinkPoints": 266,
+            "className": "Desc_AluminumPlate_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_QuantumOscillator_C": {
+            "slug": "superposition-oscillator",
+            "name": "Superposition Oscillator",
+            "description": "An oscillator circuit that uses the mechanical resonance of a vibrating crystal to create a string vibration with a precise frequency. Often used in teleportation technology and dimensional manipulation.",
+            "sinkPoints": 37292,
+            "className": "Desc_QuantumOscillator_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_TemporalProcessor_C": {
+            "slug": "neural-quantum-processor",
+            "name": "Neural-Quantum Processor",
+            "description": "The Neural-Quantum Processor utilizes a combination of neural network architecture and quantum computing techniques to achieve unprecedented performance. This technology has enabled some of FICSIT's biggest advancements in artificial intelligence and relativistic engineering.",
+            "sinkPoints": 248034,
+            "className": "Desc_TemporalProcessor_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_12_C": {
+            "slug": "ai-expansion-server",
+            "name": "AI Expansion Server",
+            "description": "Project Part #12. Ship via the Space Elevator to complete phases of Project Assembly.\nPower Usage: 1500-2500 MW (2000 MW average).\n\nGrowth is the metric by which we measure success.",
+            "sinkPoints": 597652,
+            "className": "Desc_SpaceElevatorPart_12_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_6_C": {
+            "slug": "magnetic-field-generator",
+            "name": "Magnetic Field Generator",
+            "description": "Project Part #7. Ship via the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce a powerful and easily expandable magnetic field.",
+            "sinkPoints": 11000,
+            "className": "Desc_SpaceElevatorPart_6_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SAMFluctuator_C": {
+            "slug": "sam-fluctuator",
+            "name": "SAM Fluctuator",
+            "description": "The SAM Fluctuator is able to regulate and direct the behaviour of Reanimated SAM through the application of electric charges with varying frequencies.\nThis control facilitates technologies such as matter-to-energy conversion and spatiotemporal matter manipulation.",
+            "sinkPoints": 1968,
+            "className": "Desc_SAMFluctuator_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SteelPipe_C": {
+            "slug": "steel-pipe",
+            "name": "Steel Pipe",
+            "description": "Primarily used when constructing slightly more advanced buildings.",
+            "sinkPoints": 24,
+            "className": "Desc_SteelPipe_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_ModularFrameFused_C": {
+            "slug": "fused-modular-frame",
+            "name": "Fused Modular Frame",
+            "description": "A corrosion-resistant, nitride-hardened, highly-robust-yet-lightweight modular frame.",
+            "sinkPoints": 62840,
+            "className": "Desc_ModularFrameFused_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_ModularFrameLightweight_C": {
+            "slug": "radio-control-unit",
+            "name": "Radio Control Unit",
+            "description": "Enhances and directs radio signals.",
+            "sinkPoints": 32352,
+            "className": "Desc_ModularFrameLightweight_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_FicsiteIngot_C": {
+            "slug": "ficsite-ingot",
+            "name": "Ficsite Ingot",
+            "description": "Produced by reconstructing other metals on a molecular level using Strange Alien Matter.\n\nSynthesized by FICSIT to be the perfect construction material, and used in the most high-end processes.",
+            "sinkPoints": 1936,
+            "className": "Desc_FicsiteIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_10_C": {
+            "slug": "biochemical-sculptor",
+            "name": "Biochemical Sculptor",
+            "description": "Project Part #10. Ship via the Space Elevator to complete phases of Project Assembly.\n\nYears ahead of the competition, this top-of-the-line 3D printer is used for the production of synthetic biological resources.",
+            "sinkPoints": 301778,
+            "className": "Desc_SpaceElevatorPart_10_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_7_C": {
+            "slug": "assembly-director-system",
+            "name": "Assembly Director System",
+            "description": "Project Part #6. Ship via the Space Elevator to complete phases of Project Assembly.\n\nThis extremely fast and precise computing system is specifically designed to direct the Project Assembly: Assembly Phase.",
+            "sinkPoints": 500176,
+            "className": "Desc_SpaceElevatorPart_7_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GoldIngot_C": {
+            "slug": "caterium-ingot",
+            "name": "Caterium Ingot",
+            "description": "Smelted from Caterium Ore. Primarily used for advanced electronics.",
+            "sinkPoints": 42,
+            "className": "Desc_GoldIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_FluidCanister_C": {
+            "slug": "empty-canister",
+            "name": "Empty Canister",
+            "description": "Used to package fluids for transportation.",
+            "sinkPoints": 60,
+            "className": "Desc_FluidCanister_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CircuitBoard_C": {
+            "slug": "circuit-board",
+            "name": "Circuit Board",
+            "description": "Advanced electronics that have a plethora of different uses.",
+            "sinkPoints": 696,
+            "className": "Desc_CircuitBoard_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Plastic_C": {
+            "slug": "plastic",
+            "name": "Plastic",
+            "description": "Versatile and easy to manufacture, this material has a wide range of uses.",
+            "sinkPoints": 75,
+            "className": "Desc_Plastic_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SteelPlateReinforced_C": {
+            "slug": "encased-industrial-beam",
+            "name": "Encased Industrial Beam",
+            "description": "Simultaneously utilizes the compressive strength of concrete and the tensile strength of steel.\nMostly used as a stable base for constructing buildings.",
+            "sinkPoints": 528,
+            "className": "Desc_SteelPlateReinforced_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Rubber_C": {
+            "slug": "rubber",
+            "name": "Rubber",
+            "description": "A very flexible material that has a lot of friction.",
+            "sinkPoints": 60,
+            "className": "Desc_Rubber_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PolymerResin_C": {
+            "slug": "polymer-resin",
+            "name": "Polymer Resin",
+            "description": "A by-product of Crude Oil refinement into Fuel. Commonly used to manufacture Plastic and Rubber.",
+            "sinkPoints": 12,
+            "className": "Desc_PolymerResin_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_HeavyOilResidue_C": {
+            "slug": "heavy-oil-residue",
+            "name": "Heavy Oil Residue",
+            "description": "A by-product of Plastic and Rubber production. Can be further refined into Fuel and Petroleum Coke.",
+            "sinkPoints": 30000,
+            "className": "Desc_HeavyOilResidue_C",
+            "stackSize": 50000,
+            "energyValue": 400.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 109,
+                "g": 45,
+                "b": 120,
+                "a": 0
+            }
+        },
+        "Desc_QuartzCrystal_C": {
+            "slug": "quartz-crystal",
+            "name": "Quartz Crystal",
+            "description": "Derived from Raw Quartz. Used in the production of advanced radar technology and high-quality display screens.",
+            "sinkPoints": 50,
+            "className": "Desc_QuartzCrystal_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SteelIngot_C": {
+            "slug": "steel-ingot",
+            "name": "Steel Ingot",
+            "description": "Smelted from a combination of Iron Ore and Coal. Can be made into several parts used in building construction.",
+            "sinkPoints": 8,
+            "className": "Desc_SteelIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_2_C": {
+            "slug": "versatile-framework",
+            "name": "Versatile Framework",
+            "description": "Project Part #2. Ship via the Space Elevator to complete phases of Project Assembly.",
+            "sinkPoints": 1176,
+            "className": "Desc_SpaceElevatorPart_2_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PackagedWater_C": {
+            "slug": "packaged-water",
+            "name": "Packaged Water",
+            "description": "Water, packaged for alternative transport.",
+            "sinkPoints": 130,
+            "className": "Desc_PackagedWater_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 122,
+                "g": 176,
+                "b": 212,
+                "a": 255
+            }
+        },
+        "Desc_CopperIngot_C": {
+            "slug": "copper-ingot",
+            "name": "Copper Ingot",
+            "description": "Used for crafting the most basic parts.",
+            "sinkPoints": 6,
+            "className": "Desc_CopperIngot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AluminumScrap_C": {
+            "slug": "aluminum-scrap",
+            "name": "Aluminum Scrap",
+            "description": "Refined from Alumina. Can be smelted into Aluminum Ingots for industrial usage.",
+            "sinkPoints": 27,
+            "className": "Desc_AluminumScrap_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AluminumCasing_C": {
+            "slug": "aluminum-casing",
+            "name": "Aluminum Casing",
+            "description": "A versatile container cast from Aluminum Ingots.",
+            "sinkPoints": 393,
+            "className": "Desc_AluminumCasing_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AluminaSolution_C": {
+            "slug": "alumina-solution",
+            "name": "Alumina Solution",
+            "description": "Dissolved Alumina, extracted from Bauxite. Can be further refined into Aluminum Scrap for Aluminum Ingot production.",
+            "sinkPoints": 20000,
+            "className": "Desc_AluminaSolution_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 193,
+                "g": 193,
+                "b": 193,
+                "a": 0
+            }
+        },
+        "Desc_Computer_C": {
+            "slug": "computer",
+            "name": "Computer",
+            "description": "A complex logic machine that is used to control advanced behavior in other machines.",
+            "sinkPoints": 8352,
+            "className": "Desc_Computer_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_ModularFrameHeavy_C": {
+            "slug": "heavy-modular-frame",
+            "name": "Heavy Modular Frame",
+            "description": "A more robust multipurpose frame.",
+            "sinkPoints": 10800,
+            "className": "Desc_ModularFrameHeavy_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_1_C": {
+            "slug": "smart-plating",
+            "name": "Smart Plating",
+            "description": "Project Part #1. Ship via the Space Elevator to complete phases of Project Assembly.",
+            "sinkPoints": 520,
+            "className": "Desc_SpaceElevatorPart_1_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_HighSpeedConnector_C": {
+            "slug": "high-speed-connector",
+            "name": "High-Speed Connector",
+            "description": "Connects multiple cables and wires in a very efficient way. Uses a standard pattern, so it has many varied applications.",
+            "sinkPoints": 3776,
+            "className": "Desc_HighSpeedConnector_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_3_C": {
+            "slug": "automated-wiring",
+            "name": "Automated Wiring",
+            "description": "Project Part #3. Ship via the Space Elevator to complete phases of Project Assembly.",
+            "sinkPoints": 1440,
+            "className": "Desc_SpaceElevatorPart_3_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Stator_C": {
+            "slug": "stator",
+            "name": "Stator",
+            "description": "Used for crafting.\nThe static parts of a motor.",
+            "sinkPoints": 240,
+            "className": "Desc_Stator_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CircuitBoardHighSpeed_C": {
+            "slug": "ai-limiter",
+            "name": "AI Limiter",
+            "description": "Controls AIs and keeps them from evolving in malicious ways. Super advanced electronics.",
+            "sinkPoints": 920,
+            "className": "Desc_CircuitBoardHighSpeed_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_HighSpeedWire_C": {
+            "slug": "quickwire",
+            "name": "Quickwire",
+            "description": "Caterium's high conductivity and resistance to corrosion make it ideal for small, advanced electronics.",
+            "sinkPoints": 17,
+            "className": "Desc_HighSpeedWire_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_4_C": {
+            "slug": "modular-engine",
+            "name": "Modular Engine",
+            "description": "Project Part #4. Ship via the Space Elevator to complete phases of Project Assembly.",
+            "sinkPoints": 9960,
+            "className": "Desc_SpaceElevatorPart_4_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_5_C": {
+            "slug": "adaptive-control-unit",
+            "name": "Adaptive Control Unit",
+            "description": "Project Part #5. Ship via the Space Elevator to complete phases of Project Assembly.",
+            "sinkPoints": 76368,
+            "className": "Desc_SpaceElevatorPart_5_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PressureConversionCube_C": {
+            "slug": "pressure-conversion-cube",
+            "name": "Pressure Conversion Cube",
+            "description": "Converts outgoing force into internal pressure. Required to contain unstable, high-energy matter.",
+            "sinkPoints": 255088,
+            "className": "Desc_PressureConversionCube_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PlutoniumCell_C": {
+            "slug": "encased-plutonium-cell",
+            "name": "Encased Plutonium Cell",
+            "description": "Plutonium Pellets encased in concrete.\nUsed to produce Plutonium Fuel Rods for Nuclear Power production.\n\nCaution: Moderately Radioactive.",
+            "sinkPoints": 0,
+            "className": "Desc_PlutoniumCell_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 120.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PlutoniumPellet_C": {
+            "slug": "plutonium-pellet",
+            "name": "Plutonium Pellet",
+            "description": "Produced in the Particle Accelerator through conversion of Non-fissile Uranium.\nUsed to produce Encased Plutonium Cells for Plutonium Fuel Rods.\n\nPower Usage: 250-750 MW (500 MW average).\nCaution: Moderately Radioactive.",
+            "sinkPoints": 0,
+            "className": "Desc_PlutoniumPellet_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 20.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NonFissibleUranium_C": {
+            "slug": "non-fissile-uranium",
+            "name": "Non-Fissile Uranium",
+            "description": "The Uranium-238 isotope is non-fissile, meaning it cannot be used for nuclear fission. It can, however, be converted into fissile Plutonium in the Particle Accelerator.\n\nCaution: Mildly Radioactive.",
+            "sinkPoints": 0,
+            "className": "Desc_NonFissibleUranium_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.75,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SulfuricAcid_C": {
+            "slug": "sulfuric-acid",
+            "name": "Sulfuric Acid",
+            "description": "Produced by combining Sulfur and Water in a complex reaction. Primarily used in refinement processes and Battery production.",
+            "sinkPoints": 16000,
+            "className": "Desc_SulfuricAcid_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 0,
+                "a": 0
+            }
+        },
+        "Desc_CopperDust_C": {
+            "slug": "copper-powder",
+            "name": "Copper Powder",
+            "description": "Ground-up Copper Ingots.\nThe high natural density of Copper, combined with the granularity of the powder, makes this part perfect for producing Nuclear Pasta in the Particle Accelerator.",
+            "sinkPoints": 72,
+            "className": "Desc_CopperDust_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AluminumPlateReinforced_C": {
+            "slug": "heat-sink",
+            "name": "Heat Sink",
+            "description": "Used to dissipate heat faster.",
+            "sinkPoints": 2804,
+            "className": "Desc_AluminumPlateReinforced_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_ElectromagneticControlRod_C": {
+            "slug": "electromagnetic-control-rod",
+            "name": "Electromagnetic Control Rod",
+            "description": "Regulates power output via electromagnetism.",
+            "sinkPoints": 2560,
+            "className": "Desc_ElectromagneticControlRod_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_9_C": {
+            "slug": "nuclear-pasta",
+            "name": "Nuclear Pasta",
+            "description": "Project Part #9. Ship via the Space Elevator to complete phases of Project Assembly.\nPower Usage: 500-1500 MW (1000 MW average).\n\nNuclear Pasta is extremely dense degenerate matter, formed when extreme pressure forces protons and electrons together into neutrons. It is theorized to exist naturally within the crust of neutron stars.",
+            "sinkPoints": 538976,
+            "className": "Desc_SpaceElevatorPart_9_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_UraniumCell_C": {
+            "slug": "encased-uranium-cell",
+            "name": "Encased Uranium Cell",
+            "description": "Used to produce Uranium Fuel Rods for Nuclear Power production. Made from Uranium Ore.\n\nCaution: Mildly Radioactive.",
+            "sinkPoints": 147,
+            "className": "Desc_UraniumCell_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.5,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_DissolvedSilica_C": {
+            "slug": "dissolved-silica",
+            "name": "Dissolved Silica",
+            "description": "Silica dissolved in Water, produced as part of the alternative refinement of Raw Quartz.\nThe Silica can be extracted from the Water to complete the refinement process.",
+            "sinkPoints": 0,
+            "className": "Desc_DissolvedSilica_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 226,
+                "g": 190,
+                "b": 238,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_8_C": {
+            "slug": "thermal-propulsion-rocket",
+            "name": "Thermal Propulsion Rocket",
+            "description": "Project Part #8. Ship via the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high-pressure plasma required to get Project Assembly into motion.",
+            "sinkPoints": 728508,
+            "className": "Desc_SpaceElevatorPart_8_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Gunpowder_C": {
+            "slug": "black-powder",
+            "name": "Black Powder",
+            "description": "An explosive powder that is commonly used to produce simple explosives.",
+            "sinkPoints": 14,
+            "className": "Desc_Gunpowder_C",
+            "stackSize": 200,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Ficsonium_C": {
+            "slug": "ficsonium",
+            "name": "Ficsonium",
+            "description": "Usage and production of this material is strictly prohibited. On Earth, that is. There are no rules in space, only efficiency. \n\nPower Usage: 500-1500 MW (1000 MW average).",
+            "sinkPoints": 0,
+            "className": "Desc_Ficsonium_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 250.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SingularityCell_C": {
+            "slug": "singularity-cell",
+            "name": "Singularity Cell",
+            "description": "Used to break down space and time. Required to power Portals.",
+            "sinkPoints": 114675,
+            "className": "Desc_SingularityCell_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpaceElevatorPart_11_C": {
+            "slug": "ballistic-warp-drive",
+            "name": "Ballistic Warp Drive",
+            "description": "Project Part #11. Ship via the Space Elevator to complete phases of Project Assembly.\nPower Usage: 1000-2000 MW (1500 MW average).\n\nA large amount of force is required for the Warp Drives to activate, so sticking them to rockets was the logical next step. Additionally, results improved immensely when the observers were further removed from the Warp Drives upon activation.",
+            "sinkPoints": 2895334,
+            "className": "Desc_SpaceElevatorPart_11_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Filter_C": {
+            "slug": "gas-filter",
+            "name": "Gas Filter",
+            "description": "Filters out toxins and pollutants from the air when used with a Gas Mask.",
+            "sinkPoints": 608,
+            "className": "Desc_Filter_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AlienProtein_C": {
+            "slug": "alien-protein",
+            "name": "Alien Protein",
+            "description": "Ground-up Alien Remains in a neat little package.\nUsed for medical purposes and to research alien organisms.",
+            "sinkPoints": 0,
+            "className": "Desc_AlienProtein_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Crystal_C": {
+            "slug": "blue-power-slug",
+            "name": "Blue Power Slug",
+            "description": "A strange slug radiating an unknown weak power.",
+            "sinkPoints": 0,
+            "className": "Desc_Crystal_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_AlienDNACapsule_C": {
+            "slug": "alien-dna-capsule",
+            "name": "Alien DNA Capsule",
+            "description": "Translates organic chemicals into readable alien genetic information.\nUsed for researching alien organisms.\n\nGo the extra kilometer! Knowledge is power, and power is just efficiency with fewer steps. Depositing Alien DNA Capsules in the AWESOME Sink provides FICSIT with knowledge, and pioneers with Coupons.",
+            "sinkPoints": 0,
+            "className": "Desc_AlienDNACapsule_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_WAT2_C": {
+            "slug": "mercer-sphere",
+            "name": "Mercer Sphere",
+            "description": "A weird alien phenomenon. While the sphere appears liquid, it behaves like a solid and does not have any detectable mass. It seems to somehow interact with and have awareness of its environment.",
+            "sinkPoints": 0,
+            "className": "Desc_WAT2_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Crystal_mk3_C": {
+            "slug": "purple-power-slug",
+            "name": "Purple Power Slug",
+            "description": "A strange slug radiating a powerful unknown power.",
+            "sinkPoints": 0,
+            "className": "Desc_Crystal_mk3_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Crystal_mk2_C": {
+            "slug": "yellow-power-slug",
+            "name": "Yellow Power Slug",
+            "description": "A strange slug radiating an unknown power.",
+            "sinkPoints": 0,
+            "className": "Desc_Crystal_mk2_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GunpowderMK2_C": {
+            "slug": "smokeless-powder",
+            "name": "Smokeless Powder",
+            "description": "An explosive powder that is commonly used to produce modern firearms.",
+            "sinkPoints": 58,
+            "className": "Desc_GunpowderMK2_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_RebarGunProjectile_C": {
+            "slug": "rebar-gun",
+            "name": "Rebar Gun",
+            "description": "An improvised ranged weapon for self-defense. Has to be reloaded after each use.",
+            "sinkPoints": 1968,
+            "className": "Desc_RebarGunProjectile_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorRifle_C": {
+            "slug": "rifle",
+            "name": "Rifle",
+            "description": "A long-range, rapid-fire weapon. Specifically designed to deliver adequate performance within the designated work area.",
+            "sinkPoints": 9480,
+            "className": "BP_EquipmentDescriptorRifle_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NuclearFuelRod_C": {
+            "slug": "uranium-fuel-rod",
+            "name": "Uranium Fuel Rod",
+            "description": "Used as fuel for Nuclear Power Plants.\n\nCaution: Produces radioactive Uranium Waste when consumed.\nCaution: Moderately Radioactive.",
+            "sinkPoints": 43468,
+            "className": "Desc_NuclearFuelRod_C",
+            "stackSize": 50,
+            "energyValue": 750000.0,
+            "radioactiveDecay": 50.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PlutoniumFuelRod_C": {
+            "slug": "plutonium-fuel-rod",
+            "name": "Plutonium Fuel Rod",
+            "description": "Used as fuel for Nuclear Power Plants.\n\nCaution: Produces radioactive Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
+            "sinkPoints": 153184,
+            "className": "Desc_PlutoniumFuelRod_C",
+            "stackSize": 50,
+            "energyValue": 1500000.0,
+            "radioactiveDecay": 250.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_FicsoniumFuelRod_C": {
+            "slug": "ficsonium-fuel-rod",
+            "name": "Ficsonium Fuel Rod",
+            "description": "Used as fuel for Nuclear Power Plants.\nThe power source that put FICSIT on the map. Literally. The crater is still there.\n\nCaution: Moderately Radioactive.",
+            "sinkPoints": 0,
+            "className": "Desc_FicsoniumFuelRod_C",
+            "stackSize": 50,
+            "energyValue": 150000.0,
+            "radioactiveDecay": 1000.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Rebar_Explosive_C": {
+            "slug": "explosive-rebar",
+            "name": "Explosive Rebar",
+            "description": "Explodes on impact, dealing heavy damage.",
+            "sinkPoints": 360,
+            "className": "Desc_Rebar_Explosive_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Rebar_Stunshot_C": {
+            "slug": "stun-rebar",
+            "name": "Stun Rebar",
+            "description": "Electrocutes the target on impact, stunning it for a short time.\n\nStun Duration: 5 seconds",
+            "sinkPoints": 186,
+            "className": "Desc_Rebar_Stunshot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CartridgeSmartProjectile_C": {
+            "slug": "homing-rifle-ammo",
+            "name": "Homing Rifle Ammo",
+            "description": "The bullet guidance system built into this ammunition allows it to accurately hit any target within the reticle area.\nEspecially useful when dealing with agile threats, or for pioneers who can't be bothered to aim properly.",
+            "sinkPoints": 855,
+            "className": "Desc_CartridgeSmartProjectile_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NobeliskCluster_C": {
+            "slug": "cluster-nobelisk",
+            "name": "Cluster Nobelisk",
+            "description": "Detonates into multiple smaller explosions. Practical for clearing out large areas of vegetation and other inconveniences.",
+            "sinkPoints": 1376,
+            "className": "Desc_NobeliskCluster_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NobeliskExplosive_C": {
+            "slug": "nobelisk",
+            "name": "Nobelisk",
+            "description": "A simple explosive, useful for clearing boulders, vegetation, and other obstacles.",
+            "sinkPoints": 152,
+            "className": "Desc_NobeliskExplosive_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NobeliskGas_C": {
+            "slug": "gas-nobelisk",
+            "name": "Gas Nobelisk",
+            "description": "Creates a deadly gas cloud instead of a regular explosion.",
+            "sinkPoints": 544,
+            "className": "Desc_NobeliskGas_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NobeliskNuke_C": {
+            "slug": "nuke-nobelisk",
+            "name": "Nuke Nobelisk",
+            "description": "Uses a nuclear fission reaction to generate a massive explosion.\nWARNING: Ensure all FICSIT property is clear of the blast zone before detonation.",
+            "sinkPoints": 19600,
+            "className": "Desc_NobeliskNuke_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_NobeliskShockwave_C": {
+            "slug": "pulse-nobelisk",
+            "name": "Pulse Nobelisk",
+            "description": "Generates a powerful shockwave instead of a regular explosion.",
+            "sinkPoints": 1533,
+            "className": "Desc_NobeliskShockwave_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpikedRebar_C": {
+            "slug": "iron-rebar",
+            "name": "Iron Rebar",
+            "description": "Can be shot using the Rebar Gun for self-defense purposes.",
+            "sinkPoints": 8,
+            "className": "Desc_SpikedRebar_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorHazmatSuit_C": {
+            "slug": "hazmat-suit",
+            "name": "Hazmat Suit",
+            "description": "Shields pioneers from the adverse effects of radiation. \nConsumes Iodine-Infused Filters from the pioneer's inventory when worn in radioactive areas.",
+            "sinkPoints": 54100,
+            "className": "BP_EquipmentDescriptorHazmatSuit_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorNobeliskDetonator_C": {
+            "slug": "nobelisk-detonator",
+            "name": "Nobelisk Detonator",
+            "description": "A remote-control device used to handle and detonate Nobelisks.",
+            "sinkPoints": 6480,
+            "className": "BP_EquipmentDescriptorNobeliskDetonator_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GolfCart_C": {
+            "slug": "factory-carttm",
+            "name": "Factory Cart™",
+            "description": "The one and only FICSIT Factory Cart™.\nNow with special FICSIT-Foundation-only Grip Wheels, for an even smoother and faster factory floor experience!",
+            "sinkPoints": 1552,
+            "className": "Desc_GolfCart_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_GolfCartGold_C": {
+            "slug": "golden-factory-carttm",
+            "name": "Golden Factory Cart™",
+            "description": "The one and only Golden FICSIT Factory Cart™\n\nYou have now officially ascended. \nGo forth now, Master of Spaghetti, God of the Factory, Sinker of Cups, Employee of the Planet... travel in STYLE!",
+            "sinkPoints": 1852,
+            "className": "Desc_GolfCartGold_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_ItemDescriptorPortableMiner_C": {
+            "slug": "portable-miner",
+            "name": "Portable Miner",
+            "description": "Automatically extracts a resource when placed on a resource node.\nNote: Has limited storage space.",
+            "sinkPoints": 56,
+            "className": "BP_ItemDescriptorPortableMiner_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorShockShank_C": {
+            "slug": "xeno-zapper",
+            "name": "Xeno-Zapper",
+            "description": "A standard issue self-defense electroshock melee weapon.",
+            "sinkPoints": 1880,
+            "className": "BP_EquipmentDescriptorShockShank_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorObjectScanner_C": {
+            "slug": "object-scanner",
+            "name": "Object Scanner",
+            "description": "Scans the area for a selected item. Beeps at a rate proportional to proximity and direction.",
+            "sinkPoints": 1400,
+            "className": "BP_EquipmentDescriptorObjectScanner_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorHoverPack_C": {
+            "slug": "hoverpack",
+            "name": "Hoverpack",
+            "description": "Power Consumption: 100 MW\n\nAllows pioneers to move vertically and hover in mid-air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.\n\nSlow-Fall: Hold {PlayerMovement_Jump} after losing connection mid-air.\nDisable Hoverpack: Double tap {PlayerMovement_Crouch} while hovering.",
+            "sinkPoints": 265632,
+            "className": "BP_EquipmentDescriptorHoverPack_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorJetPack_C": {
+            "slug": "jetpack",
+            "name": "Jetpack",
+            "description": "Allows pioneers to travel through the air with increased control.\n\nFuel is automatically consumed from the pioneer's inventory to refill the Jetpack while on the ground.\nDifferent fuel types can be used and provide different levels of Jetpack efficiency. The preferred fuel type will be used if available, and can be set in the equipment inventory.",
+            "sinkPoints": 16580,
+            "className": "BP_EquipmentDescriptorJetPack_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorStunSpear_C": {
+            "slug": "xeno-basher",
+            "name": "Xeno-Basher",
+            "description": "A heavy self-defense electroshock melee weapon.",
+            "sinkPoints": 17800,
+            "className": "BP_EquipmentDescriptorStunSpear_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Chainsaw_C": {
+            "slug": "chainsaw",
+            "name": "Chainsaw",
+            "description": "Clears an area of flora that is too difficult to remove by hand.\n\nFuel: Biofuel",
+            "sinkPoints": 2760,
+            "className": "Desc_Chainsaw_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorJumpingStilts_C": {
+            "slug": "blade-runners",
+            "name": "Blade Runners",
+            "description": "An exoskeleton for the lower legs that assists movement, allowing pioneers to sprint faster and jump higher.\nAlso dampens the impact of landing.",
+            "sinkPoints": 4088,
+            "className": "BP_EquipmentDescriptorJumpingStilts_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EqDescZipLine_C": {
+            "slug": "zipline",
+            "name": "Zipline",
+            "description": "Provides faster traversal of factories by allowing pioneers to zip along Power lines.\nActivate the Zipline and aim at a nearby Power Line to connect to it.",
+            "sinkPoints": 5284,
+            "className": "BP_EqDescZipLine_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "BP_EquipmentDescriptorGasmask_C": {
+            "slug": "gas-mask",
+            "name": "Gas Mask",
+            "description": "Allows pioneers to breathe normally in toxic gas-filled areas.\nConsumes Gas Filters from the pioneer's inventory when in use.",
+            "sinkPoints": 14960,
+            "className": "BP_EquipmentDescriptorGasmask_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Rebar_Spreadshot_C": {
+            "slug": "shatter-rebar",
+            "name": "Shatter Rebar",
+            "description": "Fractures when shot, launching deadly debris with wide spread but limited range.",
+            "sinkPoints": 332,
+            "className": "Desc_Rebar_Spreadshot_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CartridgeChaos_C": {
+            "slug": "turbo-rifle-ammo",
+            "name": "Turbo Rifle Ammo",
+            "description": "Lightweight, compact, and volatile. These rounds provide extreme capacity and rate of fire at the cost of accuracy.",
+            "sinkPoints": 120,
+            "className": "Desc_CartridgeChaos_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CartridgeStandard_C": {
+            "slug": "rifle-ammo",
+            "name": "Rifle Ammo",
+            "description": "Standard issue Rifle ammunition, useful for establishing dominance.",
+            "sinkPoints": 25,
+            "className": "Desc_CartridgeStandard_C",
+            "stackSize": 500,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_OreIron_C": {
+            "slug": "iron-ore",
+            "name": "Iron Ore",
+            "description": "Used for crafting.\nThe most essential basic resource.",
+            "sinkPoints": 1,
+            "className": "Desc_OreIron_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Coal_C": {
+            "slug": "coal",
+            "name": "Coal",
+            "description": "Mainly used as fuel for vehicles & Coal-Powered Generators, or in Steel production.",
+            "sinkPoints": 3,
+            "className": "Desc_Coal_C",
+            "stackSize": 100,
+            "energyValue": 300.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Water_C": {
+            "slug": "water",
+            "name": "Water",
+            "description": "It's water.",
+            "sinkPoints": 5000,
+            "className": "Desc_Water_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 122,
+                "g": 176,
+                "b": 212,
+                "a": 0
+            }
+        },
+        "Desc_NitrogenGas_C": {
+            "slug": "nitrogen-gas",
+            "name": "Nitrogen Gas",
+            "description": "Has a variety of uses, including metallurgy, cooling, and Nitric Acid production. On MASSAGE-2 (AB)b, it can be extracted from underground gas wells.",
+            "sinkPoints": 10000,
+            "className": "Desc_NitrogenGas_C",
+            "stackSize": 50000,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 89,
+                "g": 89,
+                "b": 89,
+                "a": 0
+            }
+        },
+        "Desc_Sulfur_C": {
+            "slug": "sulfur",
+            "name": "Sulfur",
+            "description": "Primarily used to produce Black Powder.",
+            "sinkPoints": 11,
+            "className": "Desc_Sulfur_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SAM_C": {
+            "slug": "sam",
+            "name": "SAM",
+            "description": "Strange Alien Matter, commonly referred to as SAM, doesn't seem to follow the known laws of physics. It whispers of new possibilities.",
+            "sinkPoints": 20,
+            "className": "Desc_SAM_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_OreBauxite_C": {
+            "slug": "bauxite",
+            "name": "Bauxite",
+            "description": "Used to produce Alumina, which can be further refined into the Aluminum Scrap required to produce Aluminum Ingots.",
+            "sinkPoints": 8,
+            "className": "Desc_OreBauxite_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_OreGold_C": {
+            "slug": "caterium-ore",
+            "name": "Caterium Ore",
+            "description": "Smelted into Caterium Ingots, which are primarily used for advanced electronics.",
+            "sinkPoints": 7,
+            "className": "Desc_OreGold_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_OreCopper_C": {
+            "slug": "copper-ore",
+            "name": "Copper Ore",
+            "description": "Used for crafting.\nA basic resource primarily used for electricity.",
+            "sinkPoints": 3,
+            "className": "Desc_OreCopper_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_RawQuartz_C": {
+            "slug": "raw-quartz",
+            "name": "Raw Quartz",
+            "description": "Can be processed into Quartz Crystals and Silica, which both offer a variety of applications.",
+            "sinkPoints": 15,
+            "className": "Desc_RawQuartz_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Stone_C": {
+            "slug": "limestone",
+            "name": "Limestone",
+            "description": "Used for crafting.\nA basic resource primarily used for stable Foundations.",
+            "sinkPoints": 2,
+            "className": "Desc_Stone_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_OreUranium_C": {
+            "slug": "uranium",
+            "name": "Uranium",
+            "description": "A radioactive element. \nUsed to produce Encased Uranium Cells for Uranium Fuel Rods.\n\nCaution: Moderately Radioactive.",
+            "sinkPoints": 35,
+            "className": "Desc_OreUranium_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 15.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_LiquidOil_C": {
+            "slug": "crude-oil",
+            "name": "Crude Oil",
+            "description": "Refined into all kinds of Oil-based resources, like Fuel and Plastic.",
+            "sinkPoints": 30000,
+            "className": "Desc_LiquidOil_C",
+            "stackSize": 50000,
+            "energyValue": 320.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 25,
+                "g": 0,
+                "b": 25,
+                "a": 0
+            }
+        },
+        "Desc_Medkit_C": {
+            "slug": "medicinal-inhaler",
+            "name": "Medicinal Inhaler",
+            "description": "Fully restores health when used.\n\nThe FICSIT Medicinal Inhaler can be produced from a variety of different ingredients.",
+            "sinkPoints": 125,
+            "className": "Desc_Medkit_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Biofuel_C": {
+            "slug": "solid-biofuel",
+            "name": "Solid Biofuel",
+            "description": "The most energy-efficient form of solid Biomass. Can be used as fuel for the Chainsaw.",
+            "sinkPoints": 48,
+            "className": "Desc_Biofuel_C",
+            "stackSize": 200,
+            "energyValue": 450.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_PackagedBiofuel_C": {
+            "slug": "packaged-liquid-biofuel",
+            "name": "Packaged Liquid Biofuel",
+            "description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for vehicles and the Jetpack.",
+            "sinkPoints": 370,
+            "className": "Desc_PackagedBiofuel_C",
+            "stackSize": 100,
+            "energyValue": 750.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 58,
+                "g": 83,
+                "b": 42,
+                "a": 255
+            }
+        },
+        "Desc_GenericBiomass_C": {
+            "slug": "biomass",
+            "name": "Biomass",
+            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.\nBiomass is much more energy-efficient than raw biological matter.",
+            "sinkPoints": 12,
+            "className": "Desc_GenericBiomass_C",
+            "stackSize": 200,
+            "energyValue": 180.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Leaves_C": {
+            "slug": "leaves",
+            "name": "Leaves",
+            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use Leaves for power.",
+            "sinkPoints": 3,
+            "className": "Desc_Leaves_C",
+            "stackSize": 500,
+            "energyValue": 15.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Mycelia_C": {
+            "slug": "mycelia",
+            "name": "Mycelia",
+            "description": "Used for crafting.\nBiomass Burners and vehicles can also use Mycelia for power.",
+            "sinkPoints": 10,
+            "className": "Desc_Mycelia_C",
+            "stackSize": 200,
+            "energyValue": 20.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Wood_C": {
+            "slug": "wood",
+            "name": "Wood",
+            "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use Wood for power.",
+            "sinkPoints": 30,
+            "className": "Desc_Wood_C",
+            "stackSize": 200,
+            "energyValue": 100.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_LiquidBiofuel_C": {
+            "slug": "liquid-biofuel",
+            "name": "Liquid Biofuel",
+            "description": "Liquid Biofuel can be used as-is to generate power, or packaged to be used as fuel for vehicles.",
+            "sinkPoints": 261000,
+            "className": "Desc_LiquidBiofuel_C",
+            "stackSize": 50000,
+            "energyValue": 750.0,
+            "radioactiveDecay": 0.0,
+            "liquid": true,
+            "fluidColor": {
+                "r": 59,
+                "g": 83,
+                "b": 44,
+                "a": 0
+            }
+        },
+        "Desc_PackagedAlumina_C": {
+            "slug": "packaged-alumina-solution",
+            "name": "Packaged Alumina Solution",
+            "description": "Alumina Solution, packaged for alternative transport.",
+            "sinkPoints": 160,
+            "className": "Desc_PackagedAlumina_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 58,
+                "g": 83,
+                "b": 42,
+                "a": 255
+            }
+        },
+        "Desc_PackagedNitrogenGas_C": {
+            "slug": "packaged-nitrogen-gas",
+            "name": "Packaged Nitrogen Gas",
+            "description": "Nitrogen Gas, packaged for alternative transport.",
+            "sinkPoints": 312,
+            "className": "Desc_PackagedNitrogenGas_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 58,
+                "g": 83,
+                "b": 42,
+                "a": 255
+            }
+        },
+        "Desc_PackagedNitricAcid_C": {
+            "slug": "packaged-nitric-acid",
+            "name": "Packaged Nitric Acid",
+            "description": "Nitric Acid, packaged for alternative transport.",
+            "sinkPoints": 412,
+            "className": "Desc_PackagedNitricAcid_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 58,
+                "g": 83,
+                "b": 42,
+                "a": 255
+            }
+        },
+        "Desc_PackagedSulfuricAcid_C": {
+            "slug": "packaged-sulfuric-acid",
+            "name": "Packaged Sulfuric Acid",
+            "description": "Sulfuric Acid, packaged for alternative transport.",
+            "sinkPoints": 152,
+            "className": "Desc_PackagedSulfuricAcid_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 58,
+                "g": 83,
+                "b": 42,
+                "a": 255
+            }
+        },
+        "Desc_Fabric_C": {
+            "slug": "fabric",
+            "name": "Fabric",
+            "description": "Used to craft equipment.\nFlexible but durable fabric.",
+            "sinkPoints": 140,
+            "className": "Desc_Fabric_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_HogParts_C": {
+            "slug": "hog-remains",
+            "name": "Hog Remains",
+            "description": "The carapace of an alien Hog creature.\nUsed for MAM research.",
+            "sinkPoints": 0,
+            "className": "Desc_HogParts_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_SpitterParts_C": {
+            "slug": "spitter-remains",
+            "name": "Spitter Remains",
+            "description": "The remains of a plasma-spitting alien creature.\nUsed for MAM research.",
+            "sinkPoints": 0,
+            "className": "Desc_SpitterParts_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_StingerParts_C": {
+            "slug": "stinger-remains",
+            "name": "Stinger Remains",
+            "description": "The remains of whatever that creepy thing was.\nUsed for MAM research.",
+            "sinkPoints": 0,
+            "className": "Desc_StingerParts_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_HatcherParts_C": {
+            "slug": "hatcher-remains",
+            "name": "Hatcher Remains",
+            "description": "The shell-like remains of an alien... thing.\nUsed for MAM research.",
+            "sinkPoints": 0,
+            "className": "Desc_HatcherParts_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_CrystalShard_C": {
+            "slug": "power-shard",
+            "name": "Power Shard",
+            "description": "Power Slug mucus compressed into a solid crystal-like shard. \nIt radiates a strange power.",
+            "sinkPoints": 0,
+            "className": "Desc_CrystalShard_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_WAT1_C": {
+            "slug": "somersloop",
+            "name": "Somersloop",
+            "description": "An odd alien object with a mind-bending, yet somehow familiar shape. It emits an unsettling energy.",
+            "sinkPoints": 0,
+            "className": "Desc_WAT1_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Berry_C": {
+            "slug": "paleberry",
+            "name": "Paleberry",
+            "description": "Consumable\n\nEat to restore 1 health segment.",
+            "sinkPoints": 0,
+            "className": "Desc_Berry_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Nut_C": {
+            "slug": "beryl-nut",
+            "name": "Beryl Nut",
+            "description": "Consumable\n\nEat to restore half a health segment.",
+            "sinkPoints": 0,
+            "className": "Desc_Nut_C",
+            "stackSize": 100,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Shroom_C": {
+            "slug": "bacon-agaric",
+            "name": "Bacon Agaric",
+            "description": "Consumable\n\nEat to restore 2 health segments.",
+            "sinkPoints": 0,
+            "className": "Desc_Shroom_C",
+            "stackSize": 50,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        },
+        "Desc_Parachute_C": {
+            "slug": "parachute",
+            "name": "Parachute",
+            "description": "Slows down your fall when activated in mid-air.",
+            "sinkPoints": 6080,
+            "className": "Desc_Parachute_C",
+            "stackSize": 1,
+            "energyValue": 0.0,
+            "radioactiveDecay": 0.0,
+            "liquid": false,
+            "fluidColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 0
+            }
+        }
+    }
+}

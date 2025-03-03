@@ -9,7 +9,7 @@ import (
 
 type Application struct {
 	dataRegistry *internal.DataRegistry
-	lineBuilder *production.LineBuilder
+	lineBuilder  *production.LineBuilder
 }
 
 func NewApplication() (*Application, error) {
@@ -25,15 +25,14 @@ func NewApplication() (*Application, error) {
 
 	return &Application{
 		dataRegistry: r,
-		lineBuilder: production.NewLineBuilder(r),
+		lineBuilder:  production.NewLineBuilder(r),
 	}, nil
 }
 
 func (a *Application) GenerateLine(recipeName string) (*production.ProductionLine, error) {
-	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName)
+	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName, 15)
 	if err != nil {
 		return nil, err
 	}
 	return prod, nil
 }
-
