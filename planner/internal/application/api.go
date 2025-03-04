@@ -29,8 +29,8 @@ func NewApplication() (*Application, error) {
 	}, nil
 }
 
-func (a *Application) GenerateLine(recipeName string) (*production.ProductionLine, error) {
-	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName, 15)
+func (a *Application) GenerateLine(recipeName string, rate float64) (*production.ProductionLine, error) {
+	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName, rate)
 	if err != nil {
 		return nil, err
 	}

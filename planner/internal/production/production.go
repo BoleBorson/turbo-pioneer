@@ -1,7 +1,11 @@
 package production
 
 import (
+	"fmt"
+	"math"
+
 	"github.com/turbo-pioneer/planner/internal"
+	"github.com/turbo-pioneer/planner/internal/utils"
 )
 
 type ProductionLine struct {
@@ -22,6 +26,54 @@ func (p *ProductionLine) GetNodes() []*Node {
 
 func (p *ProductionLine) GetEdges() []*Edge {
 	return p.edges
+}
+
+func (p *ProductionLine) CreateNodeMap() map[string][]*Node {
+	var nodeMap = map[string][]*Node{}
+	for _, n := range p.nodes {
+		nodeMap[n.Recipe.Name] = append(nodeMap[n.Recipe.Name], n)
+	}
+	return nodeMap
+}
+
+func (p *ProductionLine) PrintRequiredRates() {
+	var rates = map[string]float64{}
+	for _, n := range p.nodes {
+		if n.Root {
+			continue
+		}
+		for _, out := range n.Outputs {
+			rates[out.Item.Name] += out.Rate
+		}
+	}
+	fmt.Println("Required Resource Rates:")
+	for key, value := range rates {
+		fmt.Printf("%.2f %s/min\n", value, key)
+	}
+}
+
+func (p *ProductionLine) Print() {
+	var root *Node
+	for _, n := range p.nodes {
+		if n.Root {
+			root = n
+		}
+	}
+	p.printTree(root, p.edges, "", true)
+}
+
+func (p *ProductionLine) printTree(root *Node, edges []*Edge, indent string, isLast bool) {
+	if isLast {
+		fmt.Printf("%s└── %s: %.2f %s/min\n", indent, root.Machine.Name, root.Outputs[0].Rate, root.Recipe.Name)
+	} else {
+		fmt.Printf("%s├── %s: %.2f %s/min\n", indent, root.Machine.Name, root.Outputs[0].Rate, root.Recipe.Name)
+	}
+
+	for i, edge := range edges {
+		if edge.fromNode == root {
+			p.printTree(edge.toNode, edges, indent+"│   ", i == len(edges)-1)
+		}
+	}
 }
 
 type LineBuilder struct {
@@ -87,26 +139,29 @@ func (l *LineBuilder) CreateProductionLineFromRecipe(recipeName string, rate flo
 		return nil, err
 	}
 
-	_ = NewRootNode(r, i, rate)
-	if err := l.generateLine(recipeName, prod, nil); err == nil {
-		return prod, nil
-	} else {
-		return nil, err
+	root := NewRootNode(r, i, rate)
+	prod.nodes = append(prod.nodes, root)
+	// TODO: calculate what rate machines should be run at. Ideally most machines should run at default rate and than one runs at a funky number to make up the difference.
+	numMachines := int(math.Round(rate / utils.Rate(r.Products[0].Amount, r.Time)))
+	for i := 0; i < numMachines; i++ {
+		if err := l.generateLine(recipeName, prod, root); err != nil {
+			return nil, err
+		}
 	}
+	return prod, nil
 }
 
+// TODO: The total number of machines required per level is not calculated properly rn
 func (l *LineBuilder) generateLine(recipeName string, productionLine *ProductionLine, parentNode *Node) error {
 	n, err := l.GenerateNode(recipeName)
 	if err != nil {
 		return err
 	}
-	if parentNode == nil {
-		n.Root = true
-	} else {
-		e := NewEdge(parentNode, n)
-		productionLine.edges = append(productionLine.edges, e)
-	}
+
+	e := NewEdge(parentNode, n)
+	productionLine.edges = append(productionLine.edges, e)
 	productionLine.nodes = append(productionLine.nodes, n)
+
 	for _, v := range n.Inputs {
 		name := v.Item.Name
 		l.generateLine(name, productionLine, n)

@@ -25,9 +25,11 @@ func NewNode() *Node {
 func NewRootNode(recipe *recipe.Recipe, product *item.Item, rate float64) *Node {
 	input := NewResourceFromRate(product, rate)
 	return &Node{
-		Root:   true,
-		Recipe: recipe,
-		Inputs: []*Resource{input},
+		Root:    true,
+		Recipe:  recipe,
+		Inputs:  []*Resource{input},
+		Outputs: []*Resource{input},
+		Machine: &building.Building{Name: "Output"},
 	}
 }
 
