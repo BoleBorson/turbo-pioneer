@@ -8,11 +8,12 @@ import (
 
 // Node represents a Machine. Most notably it provides information about what input rates it accepts and what output rate it releases.
 type Node struct {
-	Recipe  *recipe.Recipe
-	Root    bool
-	Machine *building.Building
-	Inputs  []*Resource
-	Outputs []*Resource
+	Recipe        *recipe.Recipe
+	Root          bool
+	Machine       *building.Building
+	ScalingFactor float64
+	Inputs        []*Resource
+	Outputs       []*Resource
 }
 
 func NewNode() *Node {

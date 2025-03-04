@@ -142,29 +142,41 @@ func (l *LineBuilder) CreateProductionLineFromRecipe(recipeName string, rate flo
 	root := NewRootNode(r, i, rate)
 	prod.nodes = append(prod.nodes, root)
 	// TODO: calculate what rate machines should be run at. Ideally most machines should run at default rate and than one runs at a funky number to make up the difference.
-	numMachines := int(math.Round(rate / utils.Rate(r.Products[0].Amount, r.Time)))
-	for i := 0; i < numMachines; i++ {
-		if err := l.generateLine(recipeName, prod, root); err != nil {
-			return nil, err
-		}
+	// numMachines := int(math.Round(rate / utils.Rate(r.Products[0].Amount, r.Time)))
+	// ratePerMachine := rate / float64(numMachines)
+	if err := l.generateLine(recipeName, prod, root, rate); err != nil {
+		return nil, err
 	}
+	// for i := 0; i < numMachines; i++ {
+	// 	if err := l.generateLine(recipeName, prod, root, ratePerMachine); err != nil {
+	// 		return nil, err
+	// 	}
+	// }
 	return prod, nil
 }
 
 // TODO: The total number of machines required per level is not calculated properly rn
-func (l *LineBuilder) generateLine(recipeName string, productionLine *ProductionLine, parentNode *Node) error {
-	n, err := l.GenerateNode(recipeName)
+func (l *LineBuilder) generateLine(recipeName string, productionLine *ProductionLine, parentNode *Node, expectedOutputRate float64) error {
+	r, err := l.dataRegistry.GetRecipe(recipeName)
 	if err != nil {
 		return err
 	}
+	numMachines := int(math.Round(expectedOutputRate / utils.Rate(r.Products[0].Amount, r.Time)))
+	for range numMachines {
 
-	e := NewEdge(parentNode, n)
-	productionLine.edges = append(productionLine.edges, e)
-	productionLine.nodes = append(productionLine.nodes, n)
+		n, err := l.GenerateNode(recipeName)
+		if err != nil {
+			return err
+		}
 
-	for _, v := range n.Inputs {
-		name := v.Item.Name
-		l.generateLine(name, productionLine, n)
+		e := NewEdge(parentNode, n)
+		productionLine.edges = append(productionLine.edges, e)
+		productionLine.nodes = append(productionLine.nodes, n)
+
+		for _, v := range n.Inputs {
+			l.generateLine(v.Item.Name, productionLine, n, v.Rate)
+		}
 	}
+
 	return nil
 }
