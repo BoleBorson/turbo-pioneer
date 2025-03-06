@@ -18,6 +18,7 @@ func main() {
 
 	prod.Print()
 	prod.PrintRequiredRates()
+	prod.PrintExcess()
 
 	// nm := prod.CreateNodeMap()
 	// for key, value := range nm {

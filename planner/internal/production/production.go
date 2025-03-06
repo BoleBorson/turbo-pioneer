@@ -9,14 +9,16 @@ import (
 )
 
 type ProductionLine struct {
-	nodes []*Node
-	edges []*Edge
+	nodes  []*Node
+	edges  []*Edge
+	excess map[string]float64 // excess resources expressed in resource/min
 }
 
 func NewProductionLine() *ProductionLine {
 	return &ProductionLine{
-		nodes: make([]*Node, 0),
-		edges: make([]*Edge, 0),
+		nodes:  make([]*Node, 0),
+		edges:  make([]*Edge, 0),
+		excess: make(map[string]float64),
 	}
 }
 
@@ -73,6 +75,12 @@ func (p *ProductionLine) printTree(root *Node, edges []*Edge, indent string, isL
 		if edge.fromNode == root {
 			p.printTree(edge.toNode, edges, indent+"│   ", i == len(edges)-1)
 		}
+	}
+}
+
+func (p *ProductionLine) PrintExcess() {
+	for k, v := range p.excess {
+		fmt.Printf("Excesss %.2f %s/min\n", v, k)
 	}
 }
 
@@ -155,14 +163,18 @@ func (l *LineBuilder) CreateProductionLineFromRecipe(recipeName string, rate flo
 	return prod, nil
 }
 
-// TODO: The total number of machines required per level is not calculated properly rn
 func (l *LineBuilder) generateLine(recipeName string, productionLine *ProductionLine, parentNode *Node, expectedOutputRate float64) error {
 	r, err := l.dataRegistry.GetRecipe(recipeName)
 	if err != nil {
 		return err
 	}
-	numMachines := int(math.Round(expectedOutputRate / utils.Rate(r.Products[0].Amount, r.Time)))
-	for range numMachines {
+	recipeOutputRate := utils.Rate(r.Products[0].Amount, r.Time)
+	numMachines := math.Ceil(expectedOutputRate / recipeOutputRate)
+	excess := (numMachines * recipeOutputRate) - expectedOutputRate
+	if excess > 0 {
+		productionLine.excess[r.Name] = productionLine.excess[r.Name] + excess
+	}
+	for range int(numMachines) {
 
 		n, err := l.GenerateNode(recipeName)
 		if err != nil {
