@@ -4,7 +4,10 @@ import (
 	"os"
 
 	"github.com/turbo-pioneer/planner/internal"
+	"github.com/turbo-pioneer/planner/internal/building"
+	"github.com/turbo-pioneer/planner/internal/item"
 	"github.com/turbo-pioneer/planner/internal/production"
+	"github.com/turbo-pioneer/planner/internal/recipe"
 )
 
 type Application struct {
@@ -35,4 +38,28 @@ func (a *Application) GenerateLine(recipeName string, rate float64) (*production
 		return nil, err
 	}
 	return prod, nil
+}
+
+func (a *Application) GetRecipe(recipeName string) (*recipe.Recipe, error) {
+	r, err := a.dataRegistry.GetRecipe(recipeName)
+	if err != nil {
+		return nil, err
+	}
+	return r, nil
+}
+
+func (a *Application) GetItem(itemName string) (*item.Item, error) {
+	i, err := a.dataRegistry.GetItem(itemName)
+	if err != nil {
+		return nil, err
+	}
+	return i, nil
+}
+
+func (a *Application) GetBuilding(buildingName string) (*building.Building, error) {
+	b, err := a.dataRegistry.GetBuilding(buildingName)
+	if err != nil {
+		return nil, err
+	}
+	return b, nil
 }
