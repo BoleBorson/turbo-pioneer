@@ -4,7 +4,6 @@ import "fmt"
 
 // Edge represents a belt of resources between two machines.
 type Edge struct {
-	resource Resource
 	fromNode *Node
 	toNode   *Node
 }

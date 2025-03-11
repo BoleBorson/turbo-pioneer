@@ -1,7 +1,16 @@
 package main
 
 import (
+	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
+
 	"github.com/turbo-pioneer/planner/internal/application"
+	"github.com/turbo-pioneer/planner/internal/building"
+	"github.com/turbo-pioneer/planner/internal/item"
+	"github.com/turbo-pioneer/planner/internal/production"
+	"github.com/turbo-pioneer/planner/internal/utils"
 )
 
 func main() {
@@ -9,36 +18,58 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// prod, err := app.GenerateLine("Reinforced Iron Plate")
-	prod, err := app.GenerateLine("Motor", 5)
+	// // prod, err := app.GenerateLine("Reinforced Iron Plate")
+	// prod, err := app.GenerateLine("Motor", 5)
 
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// prod.Print()
+	// prod.PrintRequiredRates()
+	// prod.PrintExcess()
+	r, err := app.GetRecipe("Iron Rod")
+	if err != nil {
+		panic(err)
+	}
+	rate := utils.Rate(r.Products[0].Amount, r.Time)
+	var node = production.NewNode(r, rate, &building.Building{})
+
+	in := make(chan *item.Item, 100)
+	out := make(chan *item.Item, 100)
+
+	inItem, err := app.GetItem("Desc_IronIngot_C")
+	if err != nil {
+		panic(err)
+	}
+	outItem, err := app.GetItem("Desc_IronRod_C")
+	if err != nil {
+		panic(err)
+	}
+	for range 5 {
+		in <- inItem
+	}
+
+	err = node.ConnectInput(in, inItem.ClassName)
+	if err != nil {
+		panic(err)
+	}
+	err = node.ConnectOutput(out, outItem.ClassName)
+	if err != nil {
+		panic(err)
+	}
+	done, err := node.Start()
 	if err != nil {
 		panic(err)
 	}
 
-	prod.Print()
-	prod.PrintRequiredRates()
-	prod.PrintExcess()
+	signalChannel := make(chan os.Signal, 1)
+	signal.Notify(signalChannel, syscall.SIGINT)
 
-	// nm := prod.CreateNodeMap()
-	// for key, value := range nm {
-	// 	var totalRate float64
-	// 	for _, n := range value {
-	// 		totalRate += n.Outputs[0].Rate
-	// 	}
-	// 	totalRate = math.Round(totalRate*100) / 100
-	// 	fmt.Printf("%s, in %d %s's at a total rate of %.2f per min", key, len(value), value[0].Machine.Name, totalRate)
-	// 	fmt.Println()
-	// }
+	// Wait for SIGINT (Ctrl+C)
+	<-signalChannel
+	fmt.Println("Received SIGINT, shutting down...")
 
-	// for _, v := range prod.GetNodes() {
-	// 	if v.Root {
-	// 		fmt.Println("Root Node")
-	// 	}
-	// 	fmt.Printf("%s, produced in %s \n", v.Recipe.Name, v.Machine.Name)
-	// }
-
-	// for _, v := range prod.GetEdges() {
-	// 	v.PrintEdge()
-	// }
+	// Close the 'done' channel to signal goroutines to stop
+	close(done)
 }

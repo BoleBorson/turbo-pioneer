@@ -6,13 +6,14 @@ import (
 	"github.com/turbo-pioneer/planner/internal"
 	"github.com/turbo-pioneer/planner/internal/building"
 	"github.com/turbo-pioneer/planner/internal/item"
-	"github.com/turbo-pioneer/planner/internal/production"
+
+	// "github.com/turbo-pioneer/planner/internal/production"
 	"github.com/turbo-pioneer/planner/internal/recipe"
 )
 
 type Application struct {
 	dataRegistry *internal.DataRegistry
-	lineBuilder  *production.LineBuilder
+	// lineBuilder  *production.LineBuilder
 }
 
 func NewApplication() (*Application, error) {
@@ -28,17 +29,17 @@ func NewApplication() (*Application, error) {
 
 	return &Application{
 		dataRegistry: r,
-		lineBuilder:  production.NewLineBuilder(r),
+		// lineBuilder:  production.NewLineBuilder(r),
 	}, nil
 }
 
-func (a *Application) GenerateLine(recipeName string, rate float64) (*production.ProductionLine, error) {
-	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName, rate)
-	if err != nil {
-		return nil, err
-	}
-	return prod, nil
-}
+// func (a *Application) GenerateLine(recipeName string, rate float64) (*production.ProductionLine, error) {
+// 	prod, err := a.lineBuilder.CreateProductionLineFromRecipe(recipeName, rate)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	return prod, nil
+// }
 
 func (a *Application) GetRecipe(recipeName string) (*recipe.Recipe, error) {
 	r, err := a.dataRegistry.GetRecipe(recipeName)
