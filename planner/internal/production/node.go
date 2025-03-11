@@ -1,9 +1,13 @@
 package production
 
 import (
+	"sync"
+	"time"
+
 	"github.com/turbo-pioneer/planner/internal/building"
 	"github.com/turbo-pioneer/planner/internal/item"
 	"github.com/turbo-pioneer/planner/internal/recipe"
+	"github.com/turbo-pioneer/planner/internal/utils"
 )
 
 // Node represents a Machine. Most notably it provides information about what input rates it accepts and what output rate it releases.
@@ -12,8 +16,8 @@ type Node struct {
 	Root          bool
 	Machine       *building.Building
 	ScalingFactor float64
-	Inputs        []*Resource
-	Outputs       []*Resource
+	Inputs        map[string]*Resource
+	Outputs       map[string]*Resource
 }
 
 func NewNode() *Node {
@@ -28,30 +32,85 @@ func NewRootNode(recipe *recipe.Recipe, product *item.Item, rate float64) *Node 
 	return &Node{
 		Root:    true,
 		Recipe:  recipe,
-		Inputs:  []*Resource{input},
-		Outputs: []*Resource{input},
+		Inputs:  map[string]*Resource{input.Item.ClassName: input},
+		Outputs: map[string]*Resource{input.Item.ClassName: input},
 		Machine: &building.Building{Name: "Output"},
 	}
 }
 
+func (n *Node) Produce() {
+	var wg sync.WaitGroup
+	for _, ingredient := range n.Recipe.Ingredients {
+		go n.PopResources(ingredient, &wg)
+	}
+	wg.Wait()
+	// once all resouces have been recieved we will then produce the output
+	time.Sleep(time.Duration(n.Recipe.Time)) // simulate producing the item
+	for _, p := range n.Recipe.Products {
+		r := n.Outputs[p.Item]
+		r.Buffer.Push(r.Item)
+	}
+}
+
+func (n *Node) PopResources(ingredient *recipe.Ingredient, wg *sync.WaitGroup) {
+	r := n.Inputs[ingredient.Item]
+	for i := 0; i < ingredient.Amount; i++ {
+		if item := r.Buffer.Pop(); item != nil {
+			continue // we discard the item as it was used to produce the output
+		} else {
+			time.Sleep(time.Second)
+			i--
+			continue
+		}
+	}
+	wg.Done()
+}
+
+func (n *Node) PushResources(wg *sync.WaitGroup) {
+
+}
+
 type Resource struct {
-	Item *item.Item
-	Rate float64 // rate represents the number of items produced per min
+	Item           *item.Item
+	ItemsProcessed int
+	StartTime      time.Time
+	ExpectedRate   float64 // rate represents the number of items produced per min
+	ActualRate     float64
+	Buffer         *utils.Buffer
+	Port           chan item.Item
 }
 
-func NewResource(item *item.Item, amount float64, time int) *Resource {
-	rate := (amount / float64(time)) * 60
+func NewResource(itemObj *item.Item, amount float64, time int) *Resource {
+	rate := (amount / float64(time)) * 60 // set expected rate at start, sim will adjust this value
 	return &Resource{
-		Item: item,
-		Rate: rate,
+		Item:         itemObj,
+		ExpectedRate: rate,
+		ActualRate:   0,
+		Buffer:       utils.NewBuffer(),
+		Port:         make(chan item.Item),
 	}
 }
 
-func NewResourceFromRate(item *item.Item, rate float64) *Resource {
+func NewResourceFromRate(itemObj *item.Item, rate float64) *Resource {
 	return &Resource{
-		Item: item,
-		Rate: rate,
+		Item:         itemObj,
+		ExpectedRate: rate,
+		ActualRate:   0,
+		Buffer:       utils.NewBuffer(),
+		Port:         make(chan item.Item),
 	}
+}
+
+func (r *Resource) Access() {
+	if r.ItemsProcessed == 0 {
+		r.StartTime = time.Now()
+	}
+	r.ItemsProcessed++
+
+	elapsedTime := time.Since(r.StartTime).Minutes()
+	r.ActualRate = float64(r.ItemsProcessed) / elapsedTime
+
+	r.Buffer.Push(<-r.Port)
 }
 
 type Infrastructure struct {

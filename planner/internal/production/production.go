@@ -45,7 +45,7 @@ func (p *ProductionLine) PrintRequiredRates() {
 			continue
 		}
 		for _, out := range n.Outputs {
-			rates[out.Item.Name] += out.Rate
+			rates[out.Item.Name] += out.ExpectedRate
 		}
 	}
 	fmt.Println("Required Resource Rates:")
@@ -66,9 +66,9 @@ func (p *ProductionLine) Print() {
 
 func (p *ProductionLine) printTree(root *Node, edges []*Edge, indent string, isLast bool) {
 	if isLast {
-		fmt.Printf("%s└── %s: %.2f %s/min\n", indent, root.Machine.Name, root.Outputs[0].Rate, root.Recipe.Name)
+		fmt.Printf("%s└── %s: %.2f %s/min\n", indent, root.Machine.Name, root.Outputs[0].ExpectedRate, root.Recipe.Name)
 	} else {
-		fmt.Printf("%s├── %s: %.2f %s/min\n", indent, root.Machine.Name, root.Outputs[0].Rate, root.Recipe.Name)
+		fmt.Printf("%s├── %s: %.2f %s/min\n", indent, root.Machine.Name, root.Outputs[0].ExpectedRate, root.Recipe.Name)
 	}
 
 	for i, edge := range edges {
@@ -186,7 +186,7 @@ func (l *LineBuilder) generateLine(recipeName string, productionLine *Production
 		productionLine.nodes = append(productionLine.nodes, n)
 
 		for _, v := range n.Inputs {
-			l.generateLine(v.Item.Name, productionLine, n, v.Rate)
+			l.generateLine(v.Item.Name, productionLine, n, v.ExpectedRate)
 		}
 	}
 

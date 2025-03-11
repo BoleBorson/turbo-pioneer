@@ -15,7 +15,7 @@ func NewRegistry() *ItemRegistry {
 	return &ItemRegistry{}
 }
 
-func (reg *ItemRegistry) LoadRegistryFromFile (b []byte) (reg.Registry, error) {
+func (reg *ItemRegistry) LoadRegistryFromFile(b []byte) (reg.Registry, error) {
 	err := json.Unmarshal(b, &reg)
 	if err != nil {
 		return nil, err
@@ -26,7 +26,9 @@ func (reg *ItemRegistry) LoadRegistryFromFile (b []byte) (reg.Registry, error) {
 func (reg *ItemRegistry) Get(s string) (any, error) {
 	if v, ok := reg.Items[s]; ok {
 		return v, nil
-	} else { return nil, fmt.Errorf("item %s, was not found in the registry", s)}
+	} else {
+		return nil, fmt.Errorf("item %s, was not found in the registry", s)
+	}
 }
 
 type Item struct {
@@ -35,6 +37,7 @@ type Item struct {
 	Description string `json:"description,omitempty"`
 	ClassName   string `json:"className,omitempty"`
 	Liquid      bool   `json:"liquid,omitempty"`
+	StackSize   int    `json:"stackSize"`
 }
 
 func NewItem() *Item {

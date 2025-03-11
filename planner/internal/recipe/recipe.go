@@ -50,13 +50,13 @@ type Recipe struct {
 }
 
 type Ingredient struct {
-	Item   string  `json:"item,omitempty"`
-	Amount float64 `json:"amount,omitempty"`
+	Item   string `json:"item,omitempty"`
+	Amount int    `json:"amount,omitempty"`
 }
 
 type Product struct {
-	Item   string  `json:"item,omitempty"`
-	Amount float64 `json:"amount,omitempty"`
+	Item   string `json:"item,omitempty"`
+	Amount int    `json:"amount,omitempty"`
 }
 
 func NewRecipe() *Recipe {
