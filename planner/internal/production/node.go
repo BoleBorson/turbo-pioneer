@@ -16,6 +16,7 @@ import (
 type Node struct {
 	Recipe        *recipe.Recipe
 	Root          bool
+	IsProducing   bool
 	Machine       *building.Building
 	ScalingFactor float64
 	Inputs        map[string]*Port
@@ -77,7 +78,7 @@ func (n *Node) Start() (chan struct{}, error) {
 	// startup inputs
 	for _, p := range n.Inputs {
 		if p.Connection == nil {
-			return nil, fmt.Errorf("Can't start node, port %s has no belt connected", p.Item.Name)
+			return nil, fmt.Errorf("can't start node, port %s has no belt connected", p.Item.Name)
 		}
 		go p.Pull(done)
 	}
@@ -97,11 +98,13 @@ func (n *Node) Produce(done chan struct{}) {
 			return
 		default:
 			var wg sync.WaitGroup
+			n.IsProducing = false
 			for _, ingredient := range n.Recipe.Ingredients {
 				wg.Add(1)
 				go n.PopResources(ingredient, &wg)
 			}
 			wg.Wait()
+			n.IsProducing = true
 			// once all resouces have been recieved we will then produce the output
 			time.Sleep(time.Duration(n.Recipe.Time) * time.Second) // simulate producing the item
 			for _, p := range n.Recipe.Products {
