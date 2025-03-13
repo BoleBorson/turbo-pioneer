@@ -1,9 +1,7 @@
 package internal
 
 import (
-	"github.com/turbo-pioneer/planner/internal/building"
-	"github.com/turbo-pioneer/planner/internal/item"
-	"github.com/turbo-pioneer/planner/internal/recipe"
+	"github.com/turbo-pioneer/planner/internal/models"
 	reg "github.com/turbo-pioneer/planner/internal/registry"
 )
 
@@ -11,6 +9,7 @@ type DataRegistry struct {
 	recipes   reg.Registry
 	items     reg.Registry
 	buildings reg.Registry
+	miners    reg.Registry
 }
 
 func NewRegistry() *DataRegistry {
@@ -18,9 +17,10 @@ func NewRegistry() *DataRegistry {
 }
 
 func (dr *DataRegistry) LoadRegistryFromFile(b []byte) (*DataRegistry, error) {
-	rreg := recipe.NewRegistry()
-	ireg := item.NewRegistry()
-	breg := building.NewRegistry()
+	rreg := models.NewRecipeRegistry()
+	ireg := models.NewItemRegistry()
+	breg := models.NewBuildingRegistry()
+	mreg := models.NewMinerRegistry()
 	if r, err := rreg.LoadRegistryFromFile(b); err == nil {
 		dr.recipes = r
 	} else {
@@ -36,30 +36,44 @@ func (dr *DataRegistry) LoadRegistryFromFile(b []byte) (*DataRegistry, error) {
 	} else {
 		return nil, err
 	}
+	if m, err := mreg.LoadRegistryFromFile(b); err == nil {
+		dr.miners = m
+	} else {
+		return nil, err
+	}
 	return dr, nil
 }
 
-func (dr *DataRegistry) GetRecipe(s string) (*recipe.Recipe, error) {
+func (dr *DataRegistry) GetRecipe(s string) (*models.Recipe, error) {
 	if r, err := dr.recipes.Get(s); err == nil {
-		v := r.(*recipe.Recipe)
+		v := r.(*models.Recipe)
 		return v, nil
 	} else {
 		return nil, err
 	}
 }
 
-func (dr *DataRegistry) GetItem(s string) (*item.Item, error) {
+func (dr *DataRegistry) GetItem(s string) (*models.Item, error) {
 	if r, err := dr.items.Get(s); err == nil {
-		v := r.(*item.Item)
+		v := r.(*models.Item)
 		return v, nil
 	} else {
 		return nil, err
 	}
 }
 
-func (dr *DataRegistry) GetBuilding(s string) (*building.Building, error) {
+func (dr *DataRegistry) GetBuilding(s string) (*models.Building, error) {
 	if r, err := dr.buildings.Get(s); err == nil {
-		v := r.(*building.Building)
+		v := r.(*models.Building)
+		return v, nil
+	} else {
+		return nil, err
+	}
+}
+
+func (dr *DataRegistry) GetMiner(s string) (*models.Miner, error) {
+	if r, err := dr.miners.Get(s); err == nil {
+		v := r.(*models.Miner)
 		return v, nil
 	} else {
 		return nil, err

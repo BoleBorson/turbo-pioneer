@@ -1,4 +1,4 @@
-package recipe
+package models
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ type RecipeRegistry struct {
 	Recipes map[string]*Recipe `json:"recipes,omitempty"`
 }
 
-func NewRegistry() *RecipeRegistry {
+func NewRecipeRegistry() *RecipeRegistry {
 	return &RecipeRegistry{}
 }
 

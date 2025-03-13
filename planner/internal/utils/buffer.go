@@ -1,22 +1,22 @@
 package utils
 
-import "github.com/turbo-pioneer/planner/internal/item"
+import "github.com/turbo-pioneer/planner/internal/models"
 
 type Buffer struct {
-	Data []*item.Item
+	Data []*models.Item
 }
 
 func NewBuffer() *Buffer {
 	return &Buffer{
-		Data: make([]*item.Item, 0),
+		Data: make([]*models.Item, 0),
 	}
 }
 
-func (b *Buffer) Push(item *item.Item) {
+func (b *Buffer) Push(item *models.Item) {
 	b.Data = append(b.Data, item)
 }
 
-func (b *Buffer) Pop() *item.Item {
+func (b *Buffer) Pop() *models.Item {
 	if len(b.Data) == 0 {
 		return nil
 	}

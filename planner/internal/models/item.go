@@ -1,4 +1,4 @@
-package item
+package models
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ type ItemRegistry struct {
 	Items map[string]*Item `json:"items,omitempty"`
 }
 
-func NewRegistry() *ItemRegistry {
+func NewItemRegistry() *ItemRegistry {
 	return &ItemRegistry{}
 }
 

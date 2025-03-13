@@ -1,4 +1,4 @@
-package building
+package models
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ type BuildingRegistry struct {
 	Buildings map[string]*Building `json:"buildings,omitempty"`
 }
 
-func NewRegistry() *BuildingRegistry {
+func NewBuildingRegistry() *BuildingRegistry {
 	return &BuildingRegistry{}
 }
 

@@ -3,7 +3,8 @@ package production
 import (
 	"time"
 
-	"github.com/turbo-pioneer/planner/internal/item"
+	"github.com/turbo-pioneer/planner/internal/models"
+	"github.com/turbo-pioneer/planner/internal/production/port"
 	"github.com/turbo-pioneer/planner/internal/utils"
 )
 
@@ -12,15 +13,15 @@ type Edge struct {
 	Buffer         *utils.Buffer
 	ItemsProcessed int
 	TimeOnBelt     time.Duration
-	fromPort       *Port
-	fromConn       chan *item.Item
-	toPort         *Port
-	toConn         chan *item.Item
+	fromPort       *port.Port
+	fromConn       chan *models.Item
+	toPort         *port.Port
+	toConn         chan *models.Item
 }
 
-func NewEdge(fromPort *Port, toPort *Port, speed int) *Edge {
-	fromConn := make(chan *item.Item, 100)
-	toConn := make(chan *item.Item, 100)
+func NewEdge(fromPort *port.Port, toPort *port.Port, speed int) *Edge {
+	fromConn := make(chan *models.Item, 100)
+	toConn := make(chan *models.Item, 100)
 
 	fromPort.Connection = fromConn
 	toPort.Connection = toConn

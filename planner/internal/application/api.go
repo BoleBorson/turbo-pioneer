@@ -4,11 +4,8 @@ import (
 	"os"
 
 	"github.com/turbo-pioneer/planner/internal"
-	"github.com/turbo-pioneer/planner/internal/building"
-	"github.com/turbo-pioneer/planner/internal/item"
-
+	"github.com/turbo-pioneer/planner/internal/models"
 	// "github.com/turbo-pioneer/planner/internal/production"
-	"github.com/turbo-pioneer/planner/internal/recipe"
 )
 
 type Application struct {
@@ -41,7 +38,7 @@ func NewApplication() (*Application, error) {
 // 	return prod, nil
 // }
 
-func (a *Application) GetRecipe(recipeName string) (*recipe.Recipe, error) {
+func (a *Application) GetRecipe(recipeName string) (*models.Recipe, error) {
 	r, err := a.dataRegistry.GetRecipe(recipeName)
 	if err != nil {
 		return nil, err
@@ -49,7 +46,7 @@ func (a *Application) GetRecipe(recipeName string) (*recipe.Recipe, error) {
 	return r, nil
 }
 
-func (a *Application) GetItem(itemName string) (*item.Item, error) {
+func (a *Application) GetItem(itemName string) (*models.Item, error) {
 	i, err := a.dataRegistry.GetItem(itemName)
 	if err != nil {
 		return nil, err
@@ -57,7 +54,7 @@ func (a *Application) GetItem(itemName string) (*item.Item, error) {
 	return i, nil
 }
 
-func (a *Application) GetBuilding(buildingName string) (*building.Building, error) {
+func (a *Application) GetBuilding(buildingName string) (*models.Building, error) {
 	b, err := a.dataRegistry.GetBuilding(buildingName)
 	if err != nil {
 		return nil, err

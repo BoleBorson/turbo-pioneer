@@ -7,9 +7,8 @@ import (
 	"syscall"
 
 	"github.com/turbo-pioneer/planner/internal/application"
-	"github.com/turbo-pioneer/planner/internal/building"
-	"github.com/turbo-pioneer/planner/internal/item"
-	"github.com/turbo-pioneer/planner/internal/production"
+	"github.com/turbo-pioneer/planner/internal/models"
+	"github.com/turbo-pioneer/planner/internal/production/nodes"
 	"github.com/turbo-pioneer/planner/internal/utils"
 )
 
@@ -33,10 +32,10 @@ func main() {
 		panic(err)
 	}
 	rate := utils.Rate(r.Products[0].Amount, r.Time)
-	var node = production.NewNode(r, rate, &building.Building{})
+	var node = nodes.NewMachineNode(r, rate, &models.Building{})
 
-	in := make(chan *item.Item, 100)
-	out := make(chan *item.Item, 100)
+	in := make(chan *models.Item, 100)
+	out := make(chan *models.Item, 100)
 
 	inItem, err := app.GetItem("Desc_IronIngot_C")
 	if err != nil {
