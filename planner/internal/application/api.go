@@ -61,3 +61,11 @@ func (a *Application) GetBuilding(buildingName string) (*models.Building, error)
 	}
 	return b, nil
 }
+
+func (a *Application) GetMiner(minerName string) (*models.Miner, error) {
+	m, err := a.dataRegistry.GetMiner(minerName)
+	if err != nil {
+		return nil, err
+	}
+	return m, nil
+}

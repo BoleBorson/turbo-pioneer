@@ -52,13 +52,13 @@ func NewRootMachine(recipe *models.Recipe, product *models.Item, rate float64) *
 	}
 }
 
-func (n *Machine) ConnectInput(belt chan *models.Item, itemName string) error {
+func (n *Machine) ConnectInput(belt chan *models.Item, itemName string) (*port.Port, error) {
 	if p, ok := n.Inputs[itemName]; ok {
 		p.Connection = belt
+		return p, nil
 	} else {
-		return fmt.Errorf("no input port.Port on this Machine accepts: %s", itemName)
+		return nil, fmt.Errorf("no input port.Port on this Machine accepts: %s", itemName)
 	}
-	return nil
 }
 
 func (n *Machine) ConnectOutput(belt chan *models.Item, itemName string) error {
