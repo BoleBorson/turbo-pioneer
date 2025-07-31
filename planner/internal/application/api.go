@@ -46,6 +46,10 @@ func (a *Application) GetRecipe(recipeName string) (*models.Recipe, error) {
 	return r, nil
 }
 
+func (a *Application) GetAllRecipes() (map[string]*models.Recipe, error) {
+	return a.dataRegistry.AllRecipes()
+}
+
 func (a *Application) GetItem(itemName string) (*models.Item, error) {
 	i, err := a.dataRegistry.GetItem(itemName)
 	if err != nil {

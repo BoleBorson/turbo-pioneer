@@ -1,6 +1,8 @@
 package internal
 
 import (
+	"errors"
+
 	"github.com/turbo-pioneer/planner/internal/models"
 	reg "github.com/turbo-pioneer/planner/internal/registry"
 )
@@ -42,6 +44,14 @@ func (dr *DataRegistry) LoadRegistryFromFile(b []byte) (*DataRegistry, error) {
 		return nil, err
 	}
 	return dr, nil
+}
+
+func (dr *DataRegistry) AllRecipes() (map[string]*models.Recipe, error) {
+	recipes := dr.recipes.All()
+	if v, ok := recipes.(map[string]*models.Recipe); ok {
+		return v, nil
+	}
+	return nil, errors.New("registry is wrong type")
 }
 
 func (dr *DataRegistry) GetRecipe(s string) (*models.Recipe, error) {

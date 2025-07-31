@@ -31,6 +31,10 @@ func (reg *ItemRegistry) Get(s string) (any, error) {
 	}
 }
 
+func (reg *ItemRegistry) All() (any) {
+	return reg.Items
+}
+
 type Item struct {
 	Slug        string `json:"slug,omitempty"`
 	Name        string `json:"name,omitempty"`

@@ -38,6 +38,10 @@ func (reg *RecipeRegistry) Get(s string) (any, error) {
 	}
 }
 
+func (reg *RecipeRegistry) All() (any) {
+	return reg.Recipes
+}
+
 type Recipe struct {
 	Slug        string        `json:"slug,omitempty"`
 	Name        string        `json:"name,omitempty"`

@@ -31,6 +31,10 @@ func (reg *BuildingRegistry) Get(s string) (any, error) {
 	}
 }
 
+func (reg *BuildingRegistry) All() (any) {
+	return reg.Buildings
+}
+
 type Building struct {
 	Slug      string    `json:"slug,omitempty"`
 	Name      string    `json:"name,omitempty"`

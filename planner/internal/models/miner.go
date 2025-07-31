@@ -31,6 +31,10 @@ func (reg *MinerRegistry) Get(s string) (any, error) {
 	}
 }
 
+func (reg *MinerRegistry) All() (any) {
+	return reg.Miners
+}
+
 type Miner struct {
 	ClassName        string   `json:"className,omitempty"`
 	AllowedResources []string `json:"allowedResources,omitempty"`
